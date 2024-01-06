@@ -4,9 +4,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@400;700&display=swap');
 
 
-body {
-background-color: #F6F1EE;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.center-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+    position: relative;
+}
+
+
+
+.icon-link {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.icon-hover{
+    transform: scale(1.2);
+}
+
+
+/* Stile für die Popups */
+.popup {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    z-index: 1;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body {
+    background: linear-gradient(to bottom, #094c67, #0a5e5e);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 #navBar {
     margin-top: 10px;
@@ -28,152 +88,208 @@ background-color: #F6F1EE;
 #navBar > div > a {
     font-family: "Carter One";
     font-size: 1rem;
-    color: #4F4A45;
+    color: #000000;
     text-decoration-line:none;
     align-self: flex-end;
 }
 
 #navBar > div > img {
-    align-self: center;
+    margin-left: 70%;
     border-radius: 5px;
     margin: 10px;
 }
 
-#selected{
-
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 100px 100px 200px 50px 50px 100px 50px 100px 200px;
-
-}
-.hikeName{
-    font-family: "Archivo Black";
+.hikeName {
+    font-family: "SansSerif";
     font-size: 40px;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    margin-left: 20px;
-    display: flex;
-    align-content: flex-start;
-    color: #1B1A17;
+    margin-top: 20px; /* Füge margin-top hinzu, um den Abstand nach oben zu vergrößern */
+    margin-bottom: 20px;
+    color: #000000;
 }
-.location{
 
-    font-size: 30px;
-    grid-area: 2/1/2/1;
-    margin-left: 20px;
+.hikeDetails {
     display: flex;
-    align-content: flex-start;
-    color: #1B1A17;
-    font-family: "Pt Sans";
-    font-weight: bold;     
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
+.hikeImg {
+    margin-left: 20px;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+#slideshow {
+    width: 800px; /* Ändere die Breite auf 100%, um sie innerhalb des Containers zu füllen */
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.57);
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+#slideshow-container {
+    width: 800px;
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#scroll-indicator {
+    cursor: pointer;
+    font-size: 10px;
+    margin-bottom: 40px;
+    align-self: center; /* Zentriere den Pfeil horizontal */
+    animation: bounce 1.5s infinite;
+}
+
+#scroll-indicator img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 40px;
+    align-self: center; /* Zentriere den Pfeil horizontal */
+    animation: bounce 1.5s infinite;
+}
+
+
+#selected {
+    display: flex;
+    flex-direction: column; /* Ändere die Ausrichtung zu vertikal */
+    align-items: center;
+    margin-top: 10px;
+    padding:20px;
+    border-radius: 10px;
+}
+
+
+.location {
+    font-size: 30px;
+    margin-top: 10px; /* Füge margin-top hinzu, um den Abstand nach oben zu vergrößern */
+    color: #000000;
+    font-family: "Pt Sans";
+    font-weight: bold;
+}
+
 #ww_da6967281f185{
     height: 200px;
     max-width: 480px;
-    grid-area: 3/2/3/2;
     padding: 20px;
     border-radius: 10px;
-
 }
-#map{
-    grid-area: 3/1/6/2;
+#map {
     border-radius: 10px;
-
-
+    height: 400px;
+    width: 50%;
+    margin-top: 50px;
 }
-.descriptionLabel{
-    grid-area: 7/1/7/1;
+
+
+#description {
     padding: 20px;
-    font-family: "Pt Sans"; 
-    font-weight: bold;
-    font-size: 20px;
-}
-.description {
-    grid-area: 8/1/8/1;
-    padding: 20px;
-    font-family: "Pt Sans";
-    font-size: 18px;
-}
-.hikeImg{
-    grid-area: 9/1/9/1;
-    margin-left: 20px;
-    width: 90%;
-    border-radius: 10px;
-
+    font-family: "Agency FB";
+    font-size: 72px;
+    text-align: center; /* Zentriere den Text */
+    color: rgb(0, 0, 0);
 }
 
 #tour-months {
-    grid-area: 5/2/5/2;
-    position: relative;
-    margin-top: 20px;
+    grid-area: 5/2/5/2; /* Grid-Area anpassen */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Spalten für jeden Monat */
+    grid-gap: 5px; /* Abstand zwischen den Monaten */
+}
 
-}
-.tour-month {
-    background-color: white;
-    border: 1px solid #ececec;
-    width: 40px;
-    float: left;
-    padding: 0;
-    overflow: hidden;
-    margin-right: -1px;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    font-family: "Pt Sans";
-}
+
 
 .tour-month-selected {
     background-color: #4F6F52;
-    color: white;
+    color: #ffffff;
 }
-.monthLabel {
-    grid-area: 4/2/4/2;
-    margin-top: 20px;
-    font-family: "Pt Sans"; 
-    font-weight: bold;      
-    font-size: 20px;        
 
+.months-container{
+    top:100%;
+    margin-top: 800px;
 }
-.info {
-    grid-area: 6/2/6/2;
-    width: 480px;
+
+.months-container,
+.weather-map-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: rgba(2, 0, 0, 0.49);
+    z-index: 1;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.show{
+    display: block;
+}
+
+.monthLabel, .tour-month, .weather-widget {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+
+.weather-widget {
+    height: 200px;
+    max-width: 480px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.weather-map-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.info {
+    display: block;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 10px;
 }
 
 .info2 {
-    grid-area: 7/2/8/2;
-    display: grid;
+    display: block;
     margin-top: 20px;
-    grid-template-columns: 220px 220px;
-    grid-template-rows: 75px 75px;
-}
-.technique {
-    grid-area: 1/1/1/1;
-}
-.stamina {
-    grid-area: 2/1/2/1;
-}
-.strength {
-    grid-area: 1/2/1/2;
-}
-.likes {
-    display: flex;
-    justify-content: flex-end;
 }
 
+.likes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.like{
+    height: 30px;
+    padding: 20px;
+}
+
+#drive img {
+    height: 30px;
+    padding: 20px;
+}
 .leaflet-routing-container{
+    display: block;
+}
+
+.leaflet-bar{
     display: none;
 }
-leaflet-bar{
-    display: none;
-}
-leaflet-control{
+.leaflet-control{
     display: none;
 }
 
@@ -188,7 +304,7 @@ leaflet-control{
     font-size: 30px;
 }
 .info > div > img {
-    height: 30px;
+    height: 40px;
 }
 
 .info2 > div {
@@ -206,7 +322,15 @@ leaflet-control{
     padding: 20px;
 }
 
-
-
-
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
 

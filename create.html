@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+<head>
+    <title>Create Your Own Hike</title>
+    <link rel="stylesheet" href="create.css">
+    <style>
+        .info-box textarea{
+            height: 40px;
+            width: 94%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1 class="text-center">Create Your Own Hike</h1>
+    <div class="info-box">
+        <div class="option">
+            <label for="months">Month:</label>
+            <select id="months">
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+        </div>
+
+        <div class="option">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="option">
+            <label for="description">Description:</label>
+            <textarea id="description" rows="4"></textarea>
+        </div>
+
+        <div class="option">
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration">
+        </div>
+
+        <div class="option">
+            <label for="distance">Distance:</label>
+            <input type="text" id="distance">
+        </div>
+
+        <div class="option">
+            <label for="elevation">Altitude:</label>
+            <input type="text" id="elevation">
+        </div>
+
+        <div class="option">
+            <label for="landscape">Landscape:</label>
+            <input type="text" id="landscape">
+        </div>
+
+        <button onclick="submitForm()">Create Hike</button>
+    </div>
+</div>
+
+<script>
+    function submitForm() {
+        // Hier kannst du die Formulardaten verarbeiten
+        alert('Formulardaten absenden...');
+    }
+</script>
+
+<script src="script.js"></script>
 </body>
+
 </html>

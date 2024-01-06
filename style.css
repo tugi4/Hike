@@ -1,113 +1,321 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&display=swap');
 
+
+.attention-text {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+
+}
+
+.attention-text h2 {
+    font-size: 32px;
+    color: #094c67;
+}
+
+.attention-text p {
+    font-size: 18px;
+    color: #333;
+}
+
+
 body {
-    background-image: url("./image/quairaing-540122_1280.jpg");
-    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: auto; /* Verhindern Sie das Scrollen, um nur das Dreieck sichtbar zu machen */
+}
+
+.triangle-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+.triangle {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+
+.swiper-container {
+    margin-top: 20px;
+}
+
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide a {
+    display: block;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#searchBar {
+    visibility: hidden;
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  /* Änderung: Vollständige Höhe des Viewports */
+    z-index: -1;
+    background: linear-gradient(to bottom, #094c67, #0a5e5e);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;  /* Änderung: Position ganz links oben */
+    filter: brightness(50%);
+}
+
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 #navBar {
-    margin-top: 10px;
+    margin-top: 100px;
     position: fixed;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    height: 2.5rem;
     width: 100%;
-    gap: 3rem;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-direction: row; /* Ändere flex-direction auf row */
+    justify-content: flex-start; /* Ändere justify-content auf flex-start */
+    align-items: flex-start;
+    width:100%;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 100px;
+
+}
+
+.swiper-slide:nth-child(even) {
+    order: -1;
 }
 
 #navBar > div {
     display: flex;
-    gap: 10px;
-    height: 2.5rem;
+    align-items: center;
 }
 
-#navBar > div > a {
-    font-family: "Carter One";
-    font-size: 1rem;
-    color: white;
-    text-decoration-line:none;
-    align-self: flex-end;
+#navBar > div > a, #navBar > div > img {
+    margin: 0 10px;
 }
 
-#navBar > div > img {
-    align-self: center;
-    border-radius: 5px;
-    margin: 10px;
+#navBar > div > .left-icon {
+    margin-right: auto;
 }
 
-
-body {
-    padding: 0;
-    margin: 0;
+#navBar > div > .right-icon {
+    margin-left: auto;
 }
+
 
 .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 100px;
+    margin-left: 250px;
 }
-#search {
-    position: fixed;
-    margin-top: 250px;
-    width: 60%;
-    height: 35px;
-    border-radius: 25px;
-    border: white;
-    padding: 5px 5px 5px 20px;
-}
+
 .box > h1 {
-    margin-top: 90px;
-    position: fixed;
-    font-family: "Carter One";
+    margin-top: 100px;
+    font-family: 'SansSerif';
     font-size: 50px;
     color: white;
 }
 
 .hikes {
     position: relative;
-    margin-top: 300px;
+    align-items: center;
+    margin-top: 250px;
     border-radius: 10px;
-    background-color: white;
-    width: 80%;
-    height: 90%;
-}
-#hike{
+    background-color: rgba(255, 255, 255, 0.7);
+    max-width: 50px;
+    max-height: 50px;
     padding: 20px;
-    display: inline-flex;
-    flex-flow: wrap;
-    gap: 20px;
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
+
+.indexhike:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.indexhike {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 80px;
+    margin-top:50px;
+    margin-left:200px;
+    height: 240px;
+    width: 80%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6); /* Hinzugefügte Regel für den Schatten */
+    position:relative;
+}
+
+.indexhike > a {
+    position: relative;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.indexhike > a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+
+.indexhike > a > img {
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.indexhike > a > div {
+    font-family: "Bell MT";
+    font-size: medium;
+    color: white;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#hike {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
 #hikename {
     list-style: none;
 }
 
-#image-container {
-    height: 10px;
+.center-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    margin-top: 50px; /* Anpassung der Position nach oben */
 }
-.indexhike > a > img{
-    height: 150px;
-}
-.indexhike > a > div {
-    font-family: "Carter One";
-    color: black;
 
-}
-.indexhike > a {
+.icon-link {
+    margin: 0 20px;
     text-decoration: none;
+    color: #333;
+    text-align: center;
 }
 
-.indexhike {
-    padding: 10px;
+.icon {
+    width: 100px; /* Anpassung der Icon-Größe */
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
 }
 
 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
 
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
 
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* Adjust based on your needs */
+    background: url('https://static.vecteezy.com/ti/gratis-vektor/t2/649398-wandern-symbol-symbol-zeichen-kostenlos-vektor.jpg') center/cover no-repeat;
+    transform: translate3d(0, 0, 0);
+}
 
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
 
+h1, p {
+    margin: 0;
+}
 
-
-
+#searchPopup{
+    margin-top:100px;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-left:250px;
+}

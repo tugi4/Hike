@@ -51,12 +51,12 @@ function fetchMonth(hikeId, element) {
         .then(data => {
             //const list = document.getElementById('hike');
            // list.innerHTML = ''; // Clear existing list items, if any
-
+            element.innerHTML='';
             data.forEach(item => {
                     const month = document.createElement('li');
                 if (item.hikeid === hikeId) {
                     month.textContent = item.monthname;
-                element.appendChild(month);
+                    element.appendChild(month);
                 }
 
             });
@@ -67,9 +67,22 @@ function fetchMonth(hikeId, element) {
 
 // Function to get the value of a specific query parameter from the URL
 function getQueryParam(parameter) {
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
+    const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(parameter);
 }
+
+
+window.addEventListener("load", function () {
+    // Swiper initialisieren
+    const swiper = new Swiper('.swiper-container', {
+        // Optionen hier, z.B. direction: 'horizontal' für horizontalen Swipe
+        direction: 'horizontal',
+        loop: true, // Um die Endlosschleife zu aktivieren
+    });
+
+    // Bilder dynamisch hinzufügen
+    fetchImageNameList(swiper);
+});
+
 
 

@@ -1,32 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
     <title>Let's Hike</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
+
 <body>
-<div id="navBar">
-    <div>
-        <img src="image/icons8-mountain-100.png" alt="Let's Hike logo" height="96%">
+<div class="triangle-container">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Silberen_Detail.jpg" alt="Slide 1" class="background-image">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://vcdn.bergfex.at/images/resized/76/fb8cdae3894dfb76_961d8ea3c9f17bc1@2x.jpg" alt="Slide 2" class="background-image">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://unterwegs-reiseblog.de/wp-content/uploads/2018/02/karren.jpg" alt="Slide 3" class="background-image">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
-    <div>
-        <img src="image/icons8-login-67.png" alt="login" height="70%">
+</div>
+<div class="attention-text">
+    <h2>Discover the Beauty of Nature</h2>
+    <p>Embark on an unforgettable hiking experience with Let's Hike. Explore scenic trails, majestic landscapes, and create lasting memories.</p>
+</div>
+
+<div class="center-icons">
+    <a href="#" class="icon-link hike-link" onclick="toggleHikeElements()">
+        <img src="https://i.pinimg.com/564x/a1/0f/9b/a10f9b78d38311d030df4ea3902cb7bf.jpg" alt="Hike Icon" class="icon img-fluid">
+    </a>
+    <a href="#" class="icon-link login-link">
+        <img src="https://p7.hiclipart.com/preview/380/205/253/computer-icons-backpacking-hiking-hiking.jpg" alt="Login Icon" class="icon img-fluid">
+    </a>
+    <a href="#" class="icon-link search-link" onclick="toggleSearchBar()">
+        <img src="https://c8.alamy.com/comp/P2C83Y/hiking-vector-icon-isolated-on-transparent-background-hiking-logo-concept-P2C83Y.jpg" alt="Search Icon" class="icon img-fluid">
+    </a>
+</div>
+
+<div id="hike" class="swiper-container" style="display: none;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="#">
+                <img src="path/to/image1.jpg" alt="Hike 1">
+                <div class="description">Hike 1 Description</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#">
+                <img src="path/to/image2.jpg" alt="Hike 2">
+                <div class="description">Hike 2 Description</div>
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#">
+                <img src="path/to/image3.jpg" alt="Hike 3">
+                <div class="description">Hike 3 Description</div>
+            </a>
+        </div>
     </div>
 </div>
 
-<div class="box">
-    <h1>Let's Hike</h1>
-    <label for="search"></label>
-    <input type="search" id="search" name="search" placeholder="  Please enter a name, region or place">
-    <div class="hikes">
-    <div id = "hike"></div>
-
-    </div>
+<div id="searchBar" class="form-group">
+    <input type="text" class="form-control" id="searchPopup" placeholder="Enter your search">
 </div>
 
-<script type="text/javascript" src="main.js"></script>
-<script type="text/javascript" src="index.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000, // Zeit in Millisekunden zwischen den Folien
+            disableOnInteraction: false, // Slideshow stoppt nicht bei Benutzerinteraktion
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    function toggleSearchBar() {
+        var searchBar = document.getElementById("searchBar");
+        var hikeElements = document.getElementById("hike");
+
+        // Verstecke die Hike-Elemente
+        hikeElements.style.display = "none";
+
+        // Toggle für die Suchleiste
+        searchBar.style.visibility = (searchBar.style.visibility === "hidden") ? "visible" : "hidden";
+
+        // Scrolle zur Suchleiste
+        if (searchBar.style.visibility === "visible") {
+            searchBar.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function toggleHikeElements() {
+        var searchBar = document.getElementById("searchBar");
+        var hikeElements = document.getElementById("hike");
+
+        // Verstecke die Suchleiste
+        searchBar.style.visibility = "hidden";
+
+        // Toggle für die Hike-Elemente
+        hikeElements.style.display = (hikeElements.style.display === "none") ? "block" : "none";
+
+        // Scrolle zur Hike-Sektion
+        if (hikeElements.style.display === "block") {
+            hikeElements.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    document.getElementById("searchPopup").addEventListener("keyup", function (event) {
+        // 13 entspricht der Enter-Taste
+        if (event.keyCode === 13) {
+            // Hier kannst du die URL von "hike.html" anpassen oder die gewünschte Weiterleitung hinzufügen
+            window.location.href = "error.html";
+        }
+    });
+</script>
+
+
 </body>
+
 </html>

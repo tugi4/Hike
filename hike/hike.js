@@ -19,7 +19,7 @@ function fetchMonthBox(hikeId) {
                         }
                     }
 
-                    }
+                }
 
             });
         })
@@ -51,14 +51,17 @@ function fetchHike() {
                     const name = document.createElement('div');
                     name.textContent = item.name;
                     name.className = "hikeName";
+
                     const img = new Image();
                     img.src = base64;
-                    img.className = "hikeImg";
-                    const myMap = document.createElement('div');
-                    myMap.id = 'map';
+                    img.className = "slideshow-container";
+
                     const description = document.createElement('div');
                     description.textContent = item.description;
                     description.className = "description";
+
+                    const myMap = document.createElement('div');
+                    myMap.id = 'map';
 
                     fetchMonthBox(item.hikeid);
 
@@ -66,7 +69,6 @@ function fetchHike() {
                     box.className = 'location';
 
                     box.textContent = item.region + ' ' + item.location;
-                    list.appendChild(box);
 
                     const box2 = document.createElement('div');
                     box2.className = 'info';
@@ -223,20 +225,12 @@ function fetchHike() {
                     }
                     box3.appendChild(landscape);
 
-
-
+                    list.appendChild(box);
                     list.appendChild(name);
-                    list.appendChild(myMap);
+                    list.appendChild(slideshow);
                     list.appendChild(description);
-                    list.appendChild(img);
                     list.appendChild(box2);
                     list.appendChild(box3);
-
-
-
-
-
-
 
                     const start = item.starting_point.split(', ');
                     const ref = document.querySelector('#drive');
@@ -292,6 +286,7 @@ fetchHike();
 
 const likeBtn = document.querySelector('.like');
 let isLiked = false;
+
 const likeClick = () => {
 // if the like button hasn't been clicked
     if (!isLiked) {
