@@ -78,11 +78,11 @@ function fetchHike() {
                     const time = item.duration.slice(0, 2);
                     let dIcon;
                     if (3 <= time && time <= 5) {
-                        dIcon = "../image/time-orange.png";
+                        dIcon = "../icon/time-orange.png";
                     } else if (time < 3){
-                        dIcon = "../image/time-green.png";
+                        dIcon = "../icon/time-green.png";
                     } else if (time > 5) {
-                        dIcon = "../image/time-red.png";
+                        dIcon = "../icon/time-red.png";
                     }
                     durationImg.src = dIcon;
                     duration.textContent = item.duration.slice(0, 5);
@@ -99,11 +99,11 @@ function fetchHike() {
                     const distance = item.length;
                     let leIcon;
                     if (10 <= distance && distance <= 25){
-                        leIcon = "../image/walking-orange.png";
+                        leIcon = "../icon/walking-orange.png";
                     } else if (distance < 10) {
-                        leIcon = "../image/walking-green.png";
+                        leIcon = "../icon/walking-green.png";
                     } else if (distance > 25) {
-                        leIcon = "../image/walking-red.png";
+                        leIcon = "../icon/walking-red.png";
                     }
 
                     lengthImg.src = leIcon;
@@ -122,11 +122,11 @@ function fetchHike() {
                     const max = 1000;
                     const alt = Math.round(item.altitude);
                     if (alt === max){
-                        aIcon = "../image/elevation-orange.png";
+                        aIcon = "../icon/elevation-orange.png";
                     } else if (alt < max) {
-                        aIcon = "../image/elevation-green.png";
+                        aIcon = "../icon/elevation-green.png";
                     } else if (alt > max){
-                        aIcon = "../image/elevation-red.png";
+                        aIcon = "../icon/elevation-red.png";
                     }
                     altitudeImg.src = aIcon;
                     const altitude = document.createElement('div');
@@ -149,11 +149,11 @@ function fetchHike() {
                     technique.className = 'technique';
                     let tIcon;
                     if (t === 3){
-                        tIcon = "../image/technique-orange.png";
+                        tIcon = "../icon/technique-orange.png";
                     } else if (t < 3) {
-                        tIcon = "../image/technique-green.png";
+                        tIcon = "../icon/technique-green.png";
                     } else {
-                        tIcon = "../image/technique-red.png"
+                        tIcon = "../icon/technique-red.png"
                     }
 
                     for (let i = 1; i <= t; i++){
@@ -172,7 +172,7 @@ function fetchHike() {
                     stamina.className = 'stamina';
                     for (let i = 1; i <= s; i++){
                         const sImg = new Image();
-                        sImg.src = "../image/icons8-fitness-85.png";
+                        sImg.src = "../icon/icons8-fitness-85.png";
                         sImg.style.height = '40px';
                         stamina.appendChild(sImg);
                     }
@@ -186,11 +186,11 @@ function fetchHike() {
                     strength.className = 'strength';
                     let sIcon;
                     if (st === 3){
-                        sIcon = "../image/strength-orange.png";
+                        sIcon = "../icon/strength-orange.png";
                     } else if (st < 3) {
-                        sIcon = "../image/strength-green.png";
+                        sIcon = "../icon/strength-green.png";
                     } else if (st > 3){
-                        sIcon = "../image/strength-red.png";
+                        sIcon = "../icon/strength-red.png";
                     }
 
                     for (let i = 1; i <= st; i++){
@@ -210,11 +210,11 @@ function fetchHike() {
 
                     let lIcon;
                     if (l === 3){
-                        lIcon = "../image/landscape-orange.png";
+                        lIcon = "../icon/landscape-orange.png";
                     } else if (l > 3) {
-                        lIcon = "../image/landscape-green.png";
+                        lIcon = "../icon/landscape-green.png";
                     } else if (l < 3){
-                        lIcon = "../image/landscape-red.png";
+                        lIcon = "../icon/landscape-red.png";
                     }
 
                     for (let i = 1; i <= l; i++){
@@ -291,14 +291,14 @@ const likeClick = () => {
 // if the like button hasn't been clicked
     if (!isLiked) {
         likeBtn.classList.add('isLiked');
-        likeBtn.src = "../image/icons8-like-48.png";
+        likeBtn.src = "../icon/icons8-like-48.png";
         isLiked = true;
     }
 // if the like button has been clicked
     else {
 
         likeBtn.classList.remove('isLiked');
-        likeBtn.src = "../image/icons8-like-50.png";
+        likeBtn.src = "../icon/icons8-like-50.png";
         isLiked = false;
     }
 };

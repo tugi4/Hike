@@ -24,8 +24,8 @@ function fetchImageNameList() {
                 img.src = base64;
 
                 hike.className = "indexhike";
-                //hike.appendChild(name);
-                //hike.appendChild(img);
+                //js.appendChild(name);
+                //js.appendChild(img);
                 const tag = document.createElement('a');
                 tag.href = `hike/hike.html?selectedElement=${item.name}`;
                 tag.title = item.name;
@@ -37,7 +37,7 @@ function fetchImageNameList() {
         })
         .catch(error => console.error('Fetch error:', error));
 }
-//fetch list for detail
+//fetch list for css
 
 
 function fetchMonth(hikeId, element) {
@@ -49,7 +49,7 @@ function fetchMonth(hikeId, element) {
             return response.json();
         })
         .then(data => {
-            //const list = document.getElementById('hike');
+            //const list = document.getElementById('js');
            // list.innerHTML = ''; // Clear existing list items, if any
             element.innerHTML='';
             data.forEach(item => {

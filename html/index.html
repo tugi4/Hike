@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
 </head>
 
 <body>
@@ -52,26 +52,17 @@
 </div>
 
 <div id="hike" class="swiper-container" style="display: none;">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <a href="#">
-                <img src="path/to/image1.jpg" alt="Hike 1">
-                <div class="description">Hike 1 Description</div>
-            </a>
+    <div class="image-with-description">
+        <div class="image-title">
+            <h3> Lake Round</h3>
+            <img src="../image/lakeRound.jpg" alt="Hochplateau Tschengla">
         </div>
-        <div class="swiper-slide">
-            <a href="#">
-                <img src="path/to/image2.jpg" alt="Hike 2">
-                <div class="description">Hike 2 Description</div>
-            </a>
-        </div>
-        <div class="swiper-slide">
-            <a href="#">
-                <img src="path/to/image3.jpg" alt="Hike 3">
-                <div class="description">Hike 3 Description</div>
-            </a>
+        <div class="description">
+            <p>Crystal Lake, eingebettet zwischen majestätischen Bergen und umgeben von üppigem Wald, ist ein malerischer See, der die Sinne beruhigt und die Seele erfrischt. Sein kristallklares Wasser spiegelt den tiefblauen Himmel wider und erweckt den Eindruck, als könne man bis auf den Grund blicken. Die sanften Wellen, die am Ufer plätschern, laden zum Verweilen und Entspannen ein.</p>
         </div>
     </div>
+
+
 </div>
 
 <div id="searchBar" class="form-group">
@@ -130,7 +121,7 @@
     document.getElementById("searchPopup").addEventListener("keyup", function (event) {
         // 13 entspricht der Enter-Taste
         if (event.keyCode === 13) {
-            // Hier kannst du die URL von "hike.html" anpassen oder die gewünschte Weiterleitung hinzufügen
+            // Hier kannst du die URL von "js.html" anpassen oder die gewünschte Weiterleitung hinzufügen
             window.location.href = "error.html";
         }
     });

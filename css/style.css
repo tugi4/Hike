@@ -70,16 +70,7 @@ body {
     height: auto;
 }
 
-.description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-}
+
 
 .form-group {
     margin-top: 20px;
@@ -318,4 +309,50 @@ h1, p {
     align-items: center;
     width: 70%;
     margin-left:250px;
+}
+
+
+.image-with-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #002f47; /* Dunkelblauer Hintergrund */
+}
+
+.image-title {
+    text-align: center;
+    flex-basis: 20%; /* Passt die Breite des Titel- und Bildbereichs an */
+}
+
+.image-title h3 {
+    color: #ffffff; /* Weißer Text für den Titel */
+    margin-bottom: 10px; /* Abstand zwischen Titel und Bild */
+}
+
+.image-title img {
+    width: 100%; /* Bild nimmt die gesamte Breite seines Containers ein */
+    max-width: 200px; /* Maximale Breite des Bildes festlegen */
+    height: auto; /* Höhe automatisch anpassen */
+}
+
+.description {
+    flex-basis: 100%; /* Passt die Breite des Beschreibungsbereichs an */
+    padding: 0px;
+    color: #ffffff; /* Weißer Text für die Beschreibung */
+    border-radius: 10px; /* Abgerundete Ecken für die Beschreibung */
+    margin-left: 10px; /* Abstand zwischen Bild und Beschreibung */
+    font-size: 16px;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .image-with-description {
+        flex-direction: column;
+    }
+
+    .description {
+        margin-left: 0;
+        margin-top: 20px;
+    }
 }

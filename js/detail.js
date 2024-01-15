@@ -26,11 +26,11 @@ function fetchShortList(filter) {
                     leng.textContent = km + ' km ';
                     let leIcon;
                     if (10 <= km && km <= 25){
-                        leIcon = "../image/walking-orange.png";
+                        leIcon = "../icon/walking-orange.png";
                     } else if (km < 10) {
-                        leIcon = "../image/walking-green.png";
+                        leIcon = "../icon/walking-green.png";
                     } else if (km > 25) {
-                        leIcon = "../image/walking-red.png";
+                        leIcon = "../icon/walking-red.png";
                     }
 
                     const himg = new Image();
@@ -49,11 +49,11 @@ function fetchShortList(filter) {
                     const t = item.technique;
                     let tIcon;
                     if (t === 3){
-                        tIcon = "../image/technique-orange.png";
+                        tIcon = "../icon/technique-orange.png";
                     } else if (t < 3) {
-                        tIcon = "../image/technique-green.png";
+                        tIcon = "../icon/technique-green.png";
                     } else {
-                        tIcon = "../image/technique-red.png"
+                        tIcon = "../icon/technique-red.png"
                     }
                     for (let i = 1; i < t; i++){
                         const hill = new Image();
@@ -69,11 +69,11 @@ function fetchShortList(filter) {
                     const time = item.duration.slice(0, 2);
                     let dIcon;
                     if (3 <= time && time <= 5) {
-                        dIcon = "../image/time-orange.png";
+                        dIcon = "../icon/time-orange.png";
                     } else if (time < 3){
-                        dIcon = "../image/time-green.png";
+                        dIcon = "../icon/time-green.png";
                     } else if (time > 5) {
-                        dIcon = "../image/time-red.png";
+                        dIcon = "../icon/time-red.png";
                     }
                     const du = document.createElement('div');
                     const clock = new Image();
@@ -88,8 +88,8 @@ function fetchShortList(filter) {
                     const img = new Image();
                     img.src = base64;
                     hike.className = "dhike";
-                    //hike.appendChild(name);
-                    //hike.appendChild(img);
+                    //js.appendChild(name);
+                    //js.appendChild(img);
                     const tag = document.createElement('a');
                     tag.className = "hikeTag";
                     tag.href = `../hike/hike.html?selectedElement=${item.name}`;
@@ -98,7 +98,7 @@ function fetchShortList(filter) {
                     tag.appendChild(img);
                     const container = document.createElement('div');
                     container.className = "hikeContainer";
-                    //hike.appendChild(tag);
+                    //js.appendChild(tag);
                     const region = document.createElement('div');
                     region.textContent = item.region;
                     hike.appendChild(region);
@@ -106,7 +106,7 @@ function fetchShortList(filter) {
                     const loc = document.createElement('div');
                     loc.className = 'location';
                     const locimg = new Image();
-                    locimg.src = "../image/icons8-location-26.png"
+                    locimg.src = "../icon/icons8-location-26.png"
                     locimg.style.height = "16px";
                     location.appendChild(locimg);
                     location.textContent = item.location;

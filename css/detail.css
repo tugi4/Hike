@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&display=swap');
 
 body {
-    background-image: url("../image/quairaing-540122_1280.jpg");
+    background-image: url("../icon/quairaing-540122_1280.jpg");
     background-attachment: fixed;
     display: grid;
     grid-template-columns: 1.25fr 0.75fr;
@@ -197,7 +197,7 @@ body {
 }
 
 #toggleFilter{
-    background-image: url("../image/icons8-search-more-48.png");
+    background-image: url("../icon/icons8-search-more-48.png");
     height: 45px;
     width: 45px;
     border-radius: 5px;
