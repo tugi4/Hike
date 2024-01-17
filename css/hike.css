@@ -93,6 +93,106 @@
     align-items: center;
 }
 
+.image-with-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-title {
+    flex: 1;
+    max-width: 40%;
+}
+
+.image-title h3 {
+    font-family: "SansSerif";
+    font-size: 1.5em;
+    color: #000;
+}
+
+.image-title img {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.rating {
+    flex: 1;
+    max-width: 30%;
+    margin-left: 20px;
+}
+
+.rating h3 {
+    font-family: "SansSerif";
+    font-size: 1em;
+    color: #000;
+}
+
+.stars {
+    font-size: 20px;
+    color: gold;
+}
+
+.description {
+    flex: 1;
+    max-width: 30%;
+    margin-left: 20px;
+}
+
+.description p {
+    font-family: "SansSerif";
+    font-size: 14px;
+    color: #000;
+}
+
+.months-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+    flex: 2;
+    max-width: 30%;
+    top:100%;
+    left: 1000%;
+}
+
+.tour-month {
+    font-family: "SansSerif", sans-serif;
+    font-size: 1em;
+    color: #000;
+    background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.weather-widget-container {
+    margin-top: 20px;
+}
+
+#ww_da6967281f185 {
+    max-width: 100%;
+}
+
+#scroll-indicator {
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 20px;
+    align-self: center;
+    animation: bounce 1.5s infinite;
+    filter: invert(1);
+}
+
+/* Weitere CSS-Regeln und Anpassungen können hinzugefügt werden, wenn nötig */
+
+
 .center-icons {
     display: flex;
     justify-content: space-around;
@@ -295,12 +395,7 @@ body {
     color: #ffffff;
 }
 
-.months-container{
-    top:100%;
-    margin-top: 800px;
-}
 
-.months-container,
 .weather-map-container {
     display: none;
     position: absolute;
@@ -421,3 +516,133 @@ body {
     }
 }
 
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-with-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-title {
+    flex: 1;
+    max-width: 40%;
+}
+
+.image-title h3 {
+    font-family: "SansSerif";
+    font-size: 1.5em;
+    color: #000;
+}
+
+.image-title img {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.description {
+    flex: 1;
+    max-width: 50%;
+    margin-left: 20px;
+}
+
+.description p {
+    font-family: "SansSerif";
+    font-size: 14px;
+    color: #000;
+}
+
+.weather-and-months {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.weather-widget-container {
+    flex: 1;
+    max-width: 40%;
+    margin-right: 20px;
+}
+
+
+
+.tour-month {
+    font-family: "SansSerif";
+    font-size: 1em;
+    color: #000;
+    background-color: #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ww_da6967281f185 {
+    max-width: 100%;
+}
+
+
+.rating h3 {
+    font-size: 14px;
+    color: black;
+}
+
+.rating p{
+    font-size: 16px;
+    color: black;
+}
+
+.rating h2{
+    font-size: 14px;
+    color: black;
+}
+
+
+.stars {
+    display: inline-block;
+}
+
+.stars:before {
+    content: '\2605'; /* Stern-Symbol */
+    font-size: 14px;
+    color: #FFD700; /* Farbe der Sterne */
+    margin-right: 5px;
+}
+
+.stars[data-rating="1"]:before {
+    content: '\2605\2606\2606\2606\2606'; /* Ein Stern */
+}
+
+.stars[data-rating="2"]:before {
+    content: '\2605\2605\2606\2606\2606'; /* Zwei Sterne */
+}
+
+.stars[data-rating="3"]:before {
+    content: '\2605\2605\2605\2606\2606'; /* Drei Sterne */
+}
+
+.stars[data-rating="4"]:before {
+    content: '\2605\2605\2605\2605\2606'; /* Vier Sterne */
+}
+
+.stars[data-rating="5"]:before {
+    content: '\2605\2605\2605\2605\2605'; /* Fünf Sterne */
+}
