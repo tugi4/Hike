@@ -67,58 +67,53 @@
 
 
 <div class="container">
-
-    <div class="center-icons">
-
-        <a href="#" class="likes">
-            <img class="like" src="../icon/icons8-like-50.png" alt="like">
-        </a>
-
-        <a href="#" class="icon-link hike-link" onclick="toggleHikeElements()">
-            <img src="https://cdn-icons-png.flaticon.com/512/55/55281.png" alt="Icon 1" class="icon img-fluid" onmouseover="iconHover(this)" onmouseout="iconUnhover(this)" onclick="toggleMonthsContainer()">
-        </a>
-        <a href="#" class="icon-link weather-link" onclick="toggleWeatherWidget()"> <!-- Updated class and function -->
-            <img src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png" alt="Icon 2" class="icon img-fluid" onmouseover="iconHover(this)" onmouseout="iconUnhover(this)">
-        </a>
-        <a href="#" class="icon-link strecken-link" onclick="toggleStreckenDetails()"> <!-- Updated class and function -->
-            <img src="https://banner2.cleanpng.com/20180518/uth/kisspng-computer-icons-information-clip-art-5aff14d8c73108.4737218615266664568159.jpg" alt="Icon 3" class="icon img-fluid" onmouseover="iconHover(this)" onmouseout="iconUnhover(this)">
-        </a>
-
-    </div>
-
-
-    <div id="data1-popup" class="months-container" style="display: none;">
-        <div id="tour-months">
-            <div class="tour-month">Jan</div>
-            <div class="tour-month">Feb</div>
-            <div class="tour-month">Mar</div>
-            <div class="tour-month">Apr</div>
-            <div class="tour-month">May</div>
-            <div class="tour-month">Jun</div>
-            <div class="tour-month">Jul</div>
-            <div class="tour-month">Aug</div>
-            <div class="tour-month">Sep</div>
-            <div class="tour-month">Oct</div>
-            <div class="tour-month">Nov</div>
-            <div class="tour-month">Dec</div>
+    <div class="image-with-description">
+        <div class="image-title">
+            <h3>Karren</h3>
+            <img src="https://www.bodensee.de/extension/portal-bodensee/var/storage/images/media/bibliothek/ortsbilder/dornbirn/karren-im-winter-dsg/50547-1-ger-DE/karren-im-winter-dsg_front_large.jpg" alt="Hochplateau Tschengla">
+        </div>
+        <div class="rating">
+            <h3>Overall Difficulty:</h3>
+            <div class="stars" data-rating="5"></div>
+            <h3>Landscape:</h3>
+            <div class="stars" data-rating="2"></div>
+            <h3>Level of Fitness:</h3>
+            <div class="stars" data-rating="5"></div>
+        </div>
+        <div class="duration-distance">
+            <div class="rating">
+                <h3>Duration:</h3>
+                <p>1 hour</p>
+            </div>
+            <div class="rating">
+                <h3>Distance:</h3>
+                <p>8 km</p>
+            </div>
+        </div>
+        <div class="description">
+            <p>Der "Karren" ist ein markantes Bergmassiv und beliebtes Ausflugsziel in Vorarlberg, Österreich. Dieses imposante Gebirge bietet atemberaubende Ausblicke auf die umliegende Landschaft, darunter den Bodensee und die umliegenden Berge. Der Karren ist bekannt für seine gut zugänglichen Wanderwege und bietet Outdoor-Enthusiasten die Möglichkeit, die Schönheit der alpinen Natur zu erleben. Mit seiner einladenden Umgebung und den vielfältigen Freizeitmöglichkeiten ist der Karren ein Ort, der sowohl Wanderer als auch Naturliebhaber begeistert.</p>
         </div>
     </div>
 
-    <div id="data2-popup" class="weather-widget-container" style="display: none;">
-        <div class="weather-widget" id="ww_da6967281f185" v='1.3' loc='id' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_nme":3}'>
-            More forecasts:
-            <a href="https://oneweather.org/fr/paris/20_jours/" id="ww_da6967281f185_u" target="_blank">Prévisions météo 20 jours</a>
+    <div class="weather-and-months">
+        <div class="weather-widget-container">
+            <div class="weather-widget" id="ww_da6967281f185" v='1.3' loc='id' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_nme":3}'>
+                More forecasts:
+                <a href="https://oneweather.org/fr/paris/20_jours/" id="ww_da6967281f185_u" target="_blank">Prévisions météo 20 jours</a>
+            </div>
+            <script async src="https://app2.weatherwidget.org/js/?id=ww_da6967281f185"></script>
         </div>
-        <script async src="https://app2.weatherwidget.org/js/?id=ww_da6967281f185"></script>
-    </div>
 
-    <div id="hike-details-popup" class="hike-details-container" style="display: none;">
-        <div class="strecken-details">
-            <div class="box2"></div>
-            <div class="box3"></div>
+        <div class="months-container" id="data1-popup" style="display: inline-table;">
+            <div id="tour-months">
+                <div class="tour-month">Oct</div>
+                <div class="tour-month">Nov</div>
+                <div class="tour-month">Dec</div>
+            </div>
         </div>
     </div>
 </div>
+
 
 
 <script type="text/javascript" src="../js/hike.js"></script>
