@@ -56,6 +56,9 @@ function fetchHike() {
                     img.src = base64;
                     img.className = "slideshow-container";
 
+                    const list = document.getElementById('selected');
+                    list.appendChild(img);
+
                     const description = document.createElement('div');
                     description.textContent = item.description;
                     description.className = "description";

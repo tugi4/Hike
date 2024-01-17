@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Karren</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,38 +16,50 @@
 </head>
 
 <body>
-<div id="navBar">
-    <div>
+<div id="navBar" class="navBar">
+    <div class="icon-text">
         <a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-signpost-split" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-signpost-split" viewBox="0 0 16 16">
                 <path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7zm1 3V8H2l-.75 1L2 10zm0-5h6l.75-1L14 3H8z"/>
             </svg>
+            <p>Home</p>
         </a>
+    </div>
+    <div class="icon-text">
         <a href="create.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-plus-square" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-plus-square" viewBox="0 0 16 16">
                 <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                 <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
             </svg>
+            <p>Create Hike</p>
         </a>
-    </div>
-    <div>
         <a href="login.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
                 <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
             </svg>
+            <p>Login</p>
+        </a>
+        <a href="drive_to.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+            <p>Map</p>
         </a>
     </div>
 </div>
 
-<div class="selected" id="selected">
-    <div class="hikeDetails" style="display: none;">
-        <div id="hikeName"></div>
-        <div class="slideshow-container">
+<div id="selected">
+    <div class="hikeDetails">
+        <div id="hikeName">Karren</div>
+        <div class="slideshow-container" id="slideshow-container">
             <img id="slideshow" src="" alt="Slideshow Image">
         </div>
     </div>
 </div>
+
+<span id="moreInfoText">For more information press the arrow!</span>
 
 <div class="scroll-indicator" id="scroll-indicator" onclick="scrollToContent('data1-popup')">
     <img src="https://cdn-icons-png.flaticon.com/512/275/275178.png" alt="Scroll Indicator">
@@ -61,9 +73,7 @@
         <a href="#" class="likes">
             <img class="like" src="../icon/icons8-like-50.png" alt="like">
         </a>
-        <a href="drive_to.html">
-            <img src="../icon/drive-to.png" alt="drive there">
-        </a>
+
         <a href="#" class="icon-link hike-link" onclick="toggleHikeElements()">
             <img src="https://cdn-icons-png.flaticon.com/512/55/55281.png" alt="Icon 1" class="icon img-fluid" onmouseover="iconHover(this)" onmouseout="iconUnhover(this)" onclick="toggleMonthsContainer()">
         </a>
@@ -115,9 +125,9 @@
 
 <script>
     const images = [
-        "https://upload.wikimedia.org/wikipedia/commons/d/d2/Round_Lake_%282%29_-_Fayetteville_NY.jpg",
-        "https://cdn-blob.austria.info/cms-uploads-prod/default/0001/96/thumb_95013_default_gallery_big.jpeg",
-        "https://www.travelandleisure.com/thmb/juPgMzQuYkcjfVHWVwdoGxZkDoE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-tour-du-mont-blanc-WORLDHIKES0523-ecb102509c2e47b18b8cdd6aec848db2.jpg"
+        "https://www.vorarlberg-aktuell.com/sites/default/files/styles/fullhd/public/poi/Karren%20Kante%20%28c%29%20Philipp%20Moosbrugger%20-%20Bodensee-Vorarlberg%20Tourismus%20GmbH.jpg?itok=Qc45xip2",
+        "https://www.karren.at/fileadmin/_processed_/4/6/csm_Karren_Sommer_-c-DSG_02_2_25436b6df5.jpg",
+        "https://mein.toubiz.de/api/v1/article/d0d65dde-8ecb-435b-ab40-38d13c7f279f/mainImage?format=image/jpeg&width=1900"
     ];
 
     let currentIndex = 0;
@@ -126,12 +136,20 @@
     function showNextImage() {
         slideshow.src = images[currentIndex];
         currentIndex = (currentIndex + 1) % images.length;
+        centerSlideshow();
     }
 
     setInterval(showNextImage, 3000);
 
     showNextImage();
 
+    function centerSlideshow() {
+        const containerWidth = document.getElementById("slideshow-container").clientWidth;
+        const imageWidth = slideshow.width;
+
+        const marginLeft = (containerWidth - imageWidth) / 2;
+        slideshow.style.marginLeft = `${marginLeft}px`;
+    }
 
     function scrollToContent() {
         const targetElement = document.querySelector('.container');
@@ -147,9 +165,9 @@
     }
 
     function toggleData(popupId) {
-        var popup = document.getElementById(popupId);
-        var hikeDetails = document.querySelector(".hikeDetails");
-        var centerIcons = document.querySelector(".center-icons");
+        const popup = document.getElementById(popupId);
+        const hikeDetails = document.querySelector(".hikeDetails");
+        const centerIcons = document.querySelector(".center-icons");
 
         if (popup.style.display === "block") {
             hikeDetails.style.display = "none";
@@ -169,46 +187,11 @@
         popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
     }
 
-    function hideAllPopups() {
-        const popups = document.querySelectorAll('.months-container, .weather-widget-container, .hike-details-container');
-        popups.forEach(popup => {
-            popup.style.display = 'none';
-        });
-    }
-
-    function toggleMonthsContainer() {
-        hideAllPopups();
-        const monthsContainer = document.getElementById('data1-popup');
-        if (monthsContainer.style.display === 'block') {
-            monthsContainer.style.display = 'none';
-        } else {
-            monthsContainer.style.display = 'block';
-        }
-    }
-
-    function toggleWeatherWidget() {
-        hideAllPopups();
-        const weatherWidgetContainer = document.getElementById('data2-popup');
-        if (weatherWidgetContainer.style.display === 'block') {
-            weatherWidgetContainer.style.display = 'none';
-        } else {
-            weatherWidgetContainer.style.display = 'block';
-            weatherWidgetContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-
-    function toggleStreckenDetails() {
-        hideAllPopups();
-        toggleData('hike-details-popup');
-    }
+    // Die Funktionen für Monate, Wetter und Streckeneigenschaften wurden entfernt
 
     document.addEventListener('DOMContentLoaded', function () {
-        const monthsToggle = document.querySelector('.tour-month');
-        const weatherToggle = document.querySelector('.weather-widget');
         const streckenDetailsToggle = document.querySelector('.hike-details-icon');
 
-        monthsToggle.addEventListener('click', toggleMonthsContainer);
-        weatherToggle.addEventListener('click', toggleWeatherWidget);
         streckenDetailsToggle.addEventListener('click', toggleStreckenDetails);
     });
 
@@ -219,12 +202,12 @@
         popupsContainer.style.transform = 'translate(-50%, -50%)';
     }
 
-    function iconHover(icon){
-        icon.style.transform="scale(1.2)";
+    function iconHover(icon) {
+        icon.style.transform = "scale(1.2)";
     }
 
-    function iconUnhover(icon){
-        icon.style.transform="scale(1)";
+    function iconUnhover(icon) {
+        icon.style.transform = "scale(1)";
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -234,9 +217,8 @@
             window.location.href = 'create.html';
         });
     });
-
-
 </script>
+
 
 </body>
 

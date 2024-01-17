@@ -11,6 +11,12 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
+    <style>
+        .image-with-description img:active {
+            border: 3px solid #84aada; /* Füge hier den gewünschten Hervorhebungsstil hinzu */
+            box-shadow: 0 0 10px rgb(0, 119, 255); /* Füge hier den gewünschten Schatten hinzu */
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +24,7 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Silberen_Detail.jpg" alt="Slide 1" class="background-image">
+                <img src="https://www.novascotia.com/sites/default/files/2021-05/Franey-sunrise-hike-1920x1080.jpg" alt="Slide 1" class="background-image">
             </div>
             <div class="swiper-slide">
                 <img src="https://vcdn.bergfex.at/images/resized/76/fb8cdae3894dfb76_961d8ea3c9f17bc1@2x.jpg" alt="Slide 2" class="background-image">
@@ -40,41 +46,108 @@
 </div>
 
 <div class="center-icons">
-    <a href="#" class="icon-link hike-link" onclick="toggleHikeElements()">
-        <img src="https://i.pinimg.com/564x/a1/0f/9b/a10f9b78d38311d030df4ea3902cb7bf.jpg" alt="Hike Icon" class="icon img-fluid">
+    <a href="#" class="icon img-fluid" onclick="toggleHikeElements()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" class="bi bi-signpost-split" viewBox="0 0 16 16">
+            <path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7zm1 3V8H2l-.75 1L2 10zm0-5h6l.75-1L14 3H8z"/>
+        </svg>
     </a>
-    <a href="#" class="icon-link login-link">
-        <img src="https://p7.hiclipart.com/preview/380/205/253/computer-icons-backpacking-hiking-hiking.jpg" alt="Login Icon" class="icon img-fluid">
-    </a>
-    <a href="#" class="icon-link search-link" onclick="toggleSearchBar()">
-        <img src="https://c8.alamy.com/comp/P2C83Y/hiking-vector-icon-isolated-on-transparent-background-hiking-logo-concept-P2C83Y.jpg" alt="Search Icon" class="icon img-fluid">
+    <a href="#" class="icon img-fluid" onclick="toggleSearchBar()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg>
     </a>
 </div>
 
 <div id="hike" class="swiper-container" style="display: none;">
     <div class="image-with-description">
         <div class="image-title">
-            <h3> Lake Round</h3>
-            <img src="../image/lakeRound.jpg" alt="Hochplateau Tschengla">
+            <h3>Diedampfskopf</h3>
+            <img src="https://img3.oastatic.com/img2/45452164/max/variant.jpg" alt="Hochplateau Tschengla">
+        </div>
+        <div class="rating">
+            <h2>Overall Difficulty:</h2>
+            <div class="stars" data-rating="3"></div>
+            <h3>Landscape:</h3>
+            <div class="stars" data-rating="4"></div>
+            <h3>Level of Fitness:</h3>
+            <div class="stars" data-rating="5"></div>
+        </div>
+        <div class="rating">
+            <h3>Duration:</h3>
+            <p>2 hours</p>
+            <h3>Distance:</h3>
+            <p>15 km</p>
         </div>
         <div class="description">
             <p>Crystal Lake, eingebettet zwischen majestätischen Bergen und umgeben von üppigem Wald, ist ein malerischer See, der die Sinne beruhigt und die Seele erfrischt. Sein kristallklares Wasser spiegelt den tiefblauen Himmel wider und erweckt den Eindruck, als könne man bis auf den Grund blicken. Die sanften Wellen, die am Ufer plätschern, laden zum Verweilen und Entspannen ein.</p>
         </div>
     </div>
+    <div class="image-with-description">
+        <div class="image-title">
+            <h3>Pfänder</h3>
+            <img src="https://austria-forum.org/attach/Heimatlexikon/Pf%C3%A4nder/Pfander_Bregenz_Bodensee_1.jpg" alt="Hochplateau Tschengla">
+        </div>
+        <div class="rating">
+            <h3>Overall Difficulty:</h3>
+            <div class="stars" data-rating="1"></div>
+            <h3>Landscape:</h3>
+            <div class="stars" data-rating="5"></div>
+            <h3>Level of Fitness:</h3>
+            <div class="stars" data-rating="3"></div>
+        </div>
+        <div class="rating">
+            <h3>Duration:</h3>
+            <p>2 hours</p>
+            <h3>Distance:</h3>
+            <p>15 km</p>
+        </div>
+        <div class="description">
+            <p>Crystal Lake, eingebettet zwischen majestätischen Bergen und umgeben von üppigem Wald, ist ein malerischer See, der die Sinne beruhigt und die Seele erfrischt. Sein kristallklares Wasser spiegelt den tiefblauen Himmel wider und erweckt den Eindruck, als könne man bis auf den Grund blicken. Die sanften Wellen, die am Ufer plätschern, laden zum Verweilen und Entspannen ein.</p>
+        </div>
+    </div>
+    <div class="image-with-description">
+        <div class="image-title">
+            <h3>Karren</h3>
+            <img src="https://www.bodensee.de/extension/portal-bodensee/var/storage/images/media/bibliothek/ortsbilder/dornbirn/karren-im-winter-dsg/50547-1-ger-DE/karren-im-winter-dsg_front_large.jpg" alt="Hochplateau Tschengla">
+        </div>
+        <div class="rating">
+            <h3>Overall Difficulty:</h3>
+            <div class="stars" data-rating="5"></div>
+            <h3>Landscape:</h3>
+            <div class="stars" data-rating="2"></div>
+            <h3>Level of Fitness:</h3>
+            <div class="stars" data-rating="5"></div>
+        </div>
+        <div class="rating">
+            <h3>Duration:</h3>
+            <p>2 hours</p>
+            <h3>Distance:</h3>
+            <p>15 km</p>
+        </div>
 
-
+        <div class="description">
+            <p>Crystal Lake, eingebettet zwischen majestätischen Bergen und umgeben von üppigem Wald, ist ein malerischer See, der die Sinne beruhigt und die Seele erfrischt. Sein kristallklares Wasser spiegelt den tiefblauen Himmel wider und erweckt den Eindruck, als könne man bis auf den Grund blicken. Die sanften Wellen, die am Ufer plätschern, laden zum Verweilen und Entspannen ein.</p>
+        </div>
+    </div>
 </div>
 
 <div id="searchBar" class="form-group">
-    <input type="text" class="form-control" id="searchPopup" placeholder="Enter your search">
+    <input type="text" class="form-control" id="searchPopup" placeholder="Enter your search" onclick="searchHikes()">
 </div>
 
 <script>
+    var hikes = [
+        { name: "Diedampfskopf", link: "diedamskopf.html" },
+        { name: "Pfänder", link: "pfaender.html" },
+        { name: "Karren", link: "karren.html" }
+        // Füge bei Bedarf weitere Wanderungen hinzu
+    ];
+
     var swiper = new Swiper('.swiper-container', {
         loop: true,
         autoplay: {
-            delay: 3000, // Zeit in Millisekunden zwischen den Folien
-            disableOnInteraction: false, // Slideshow stoppt nicht bei Benutzerinteraktion
+            delay: 3000,
+            disableOnInteraction: false,
         },
         pagination: {
             el: '.swiper-pagination',
@@ -115,19 +188,42 @@
         // Scrolle zur Hike-Sektion
         if (hikeElements.style.display === "block") {
             hikeElements.scrollIntoView({ behavior: 'smooth' });
+            attachImageClickEvent();
         }
     }
 
-    document.getElementById("searchPopup").addEventListener("keyup", function (event) {
-        // 13 entspricht der Enter-Taste
-        if (event.keyCode === 13) {
-            // Hier kannst du die URL von "js.html" anpassen oder die gewünschte Weiterleitung hinzufügen
-            window.location.href = "error.html";
+    function attachImageClickEvent() {
+        var hikeImages = document.querySelectorAll("#hike .image-with-description img");
+
+        hikeImages.forEach(function (img, index) {
+            img.addEventListener("click", function () {
+                // Leite auf die entsprechende Hike-Seite weiter
+                window.location.href = hikes[index].link;
+            });
+        });
+    }
+
+    function searchHikes() {
+        var searchInput = document.getElementById("searchPopup").value.trim().toLowerCase();
+
+        if (searchInput === "") {
+            return;
         }
-    });
+
+        // Durchsuche die Liste der Wanderungen nach dem Suchbegriff
+        var matchingHikes = hikes.filter(function (hike) {
+            return hike.name.toLowerCase().includes(searchInput);
+        });
+
+        // Wenn es Übereinstimmungen gibt und nur eine Übereinstimmung, leite weiter
+        if (matchingHikes.length === 1) {
+            window.location.href = matchingHikes[0].link;
+        } else {
+            // Wenn keine oder mehrere Übereinstimmungen vorhanden sind, zeige Fehlermeldung oder tu etwas anderes.
+            console.log("Keine oder mehrere Übereinstimmungen gefunden.");
+        }
+    }
 </script>
 
-
 </body>
-
 </html>

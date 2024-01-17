@@ -3,6 +3,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@400;700&display=swap');
 
+.icon-text{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.icons-right{
+    display: flex;
+    gap: 20px;
+}
+
+.icon-text p{
+    margin:0 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "SansSerif";
+    color:white;
+}
+#navBar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    background-color: #082b46;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#navBar div{
+    gap: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#navBar a {
+    font-family: "SansSerif";
+    font-size: 14px;
+    margin: 0 5px; /* Füge den gewünschten Abstand zwischen den Icons hinzu */
+    color: white;
+    text-decoration: none;
+}
+
+#navBar a:hover {
+    text-decoration: underline; /* Optional: Unterstreichung bei Hover */
+    color:white;
+}
+
+#navBar div.home-icon {
+    margin-right: auto; /* Damit der Home-Link auf der linken Seite bleibt */
+}
+
+#navBar svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+#navBar div{
+    display:flex;
+}
+
+#navBar div a {
+    margin-right: 20px; /* Optional: Füge Abstand zwischen den Links hinzu */
+}
+
+#navBar #selected {
+    background-color: #555; /* Hintergrundfarbe des ausgewählten Bereichs in der Navbar */
+}
+
+#navBar #moreInfoText {
+    text-decoration: underline; /* Optional: Unterstreichung des Textes */
+}
+
+#navBar svg:hover {
+    transform: scale(1.2);
+}
 
 .container {
     max-width: 1200px;
@@ -17,10 +95,11 @@
 
 .center-icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex:1;
     position: relative;
+    margin-top: 50px;
 }
 
 
@@ -60,6 +139,7 @@
 body {
     background: linear-gradient(to bottom, #094c67, #0a5e5e);
     margin: 0;
+    padding:0;
     font-family: 'Arial', sans-serif;
     align-items: center;
     display: flex;
@@ -68,25 +148,13 @@ body {
 }
 
 
-#navBar {
-    margin-top: 10px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 2.5rem;
-    width: 100%;
-    gap: 3rem;
-}
-
 #navBar > div {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     height: 2.5rem;
 }
 
 #navBar > div > a {
-    font-family: "Carter One";
     font-size: 1rem;
     color: #000000;
     text-decoration-line:none;
@@ -103,8 +171,18 @@ body {
     font-family: "SansSerif";
     font-size: 40px;
     margin-top: 20px; /* Füge margin-top hinzu, um den Abstand nach oben zu vergrößern */
-    margin-bottom: 20px;
-    color: #000000;
+    margin-bottom: 100px;
+    color: white;
+}
+
+#hikeName{
+    font-size: 2em;
+    color: #ffffff;
+}
+
+#moreInfoText{
+    text-decoration: underline;
+    color: #ffffff;
 }
 
 .hikeDetails {
@@ -132,13 +210,18 @@ body {
 }
 
 #slideshow-container {
-    width: 800px;
-    height: 500px;
-    margin-top: 20px;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 800px; /* Ändere die Breite nach Bedarf */
+    margin: 0 auto;
     overflow: hidden;
-    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgb(5, 44, 61);
+    align-self: center;
+    margin-top: 20px;
 }
+
+
 
 #scroll-indicator {
     cursor: pointer;
@@ -146,6 +229,7 @@ body {
     margin-bottom: 40px;
     align-self: center; /* Zentriere den Pfeil horizontal */
     animation: bounce 1.5s infinite;
+    filter: invert(1);
 }
 
 #scroll-indicator img{
@@ -161,7 +245,7 @@ body {
     display: flex;
     flex-direction: column; /* Ändere die Ausrichtung zu vertikal */
     align-items: center;
-    margin-top: 10px;
+    margin-top: 60px;
     padding:20px;
     border-radius: 10px;
 }
@@ -235,6 +319,9 @@ body {
 
 .show{
     display: block;
+}
+.scroll-indicator{
+    margin-top: 30px;
 }
 
 .monthLabel, .tour-month, .weather-widget {
