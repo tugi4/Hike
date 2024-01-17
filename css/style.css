@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&display=swap');
 
 
+
 .rating h3 {
     font-size: 16px;
     color: white;
@@ -300,7 +301,30 @@ body::before {
     text-align: center;
 }
 
+.center-icons a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin: 0 100px;
+}
 
+.center-icons a:hover {
+    text-decoration: underline;
+}
+
+.center-icons a .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-icons a p {
+    margin-top: 5px; /* Anpassen Sie den Abstand nach Bedarf */
+}
+
+.center-icons a:hover .icon {
+    transform: scale(1.1); /* Ändern Sie die Skalierung nach Bedarf */
+}
 
 .icon-link {
     margin: 0 20px;

@@ -1,14 +1,17 @@
 body {
+    background: linear-gradient(to bottom, #094c67, #0a5e5e);
     margin: 0;
     padding: 0;
-    display: flex;
+    font-family: 'Arial', sans-serif;
     align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100vh;
-    background-image: url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/10/15/09/istock-483629308.jpg');
-    background-size: cover;
-    background-position: center;
-    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
 }
 
 .info-box {
@@ -39,7 +42,7 @@ input {
 }
 
 button {
-    background-color: #4F6F52;
+    background-color: #0a5e5e;
     color: white;
     padding: 10px 15px;
     border: none;
