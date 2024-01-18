@@ -175,20 +175,27 @@
     });
 
     function toggleSearchBar() {
+        var body = document.body;
         var searchBar = document.getElementById("searchBar");
         var hikeElements = document.getElementById("hike");
 
         // Verstecke die Hike-Elemente
         hikeElements.style.display = "none";
 
-        // Toggle für die Suchleiste
-        searchBar.style.visibility = (searchBar.style.visibility === "hidden") ? "visible" : "hidden";
+        // Scrolle zum Seitenanfang
+        body.scrollIntoView({ behavior: 'smooth' });
 
-        // Scrolle zur Suchleiste
-        if (searchBar.style.visibility === "visible") {
-            searchBar.scrollIntoView({ behavior: 'smooth' });
+        // Setze die Sichtbarkeit der Suchleiste
+        var searchBarVisible = (searchBar.style.visibility === "hidden");
+        searchBar.style.visibility = searchBarVisible ? "visible" : "hidden";
+
+        // Wenn die Suchleiste jetzt sichtbar ist, dann verstecke den Rest der Seite
+        if (searchBarVisible) {
+            hikeElements.style.display = "none";
         }
     }
+
+
 
     function toggleHikeElements() {
         var searchBar = document.getElementById("searchBar");
@@ -217,6 +224,7 @@
             });
         });
     }
+
 
     function searchHikes() {
         var searchInput = document.getElementById("searchPopup").value.trim().toLowerCase();

@@ -3,6 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@400;700&display=swap');
 
+
+.video {
+    width: 1100px; /* Breite auf 100% setzen, um sie im Container zu füllen */
+    height: 600px; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    align-items: center;
+}
+
+.marked-month{
+    background-color: #082b46;
+    color: white;
+}
 .icon-text{
     display: flex;
     align-items: center;
@@ -75,6 +86,7 @@
 }
 
 #navBar #moreInfoText {
+    margin-top:20px;
     text-decoration: underline; /* Optional: Unterstreichung des Textes */
 }
 
@@ -83,14 +95,25 @@
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    border-radius: 10px;
+    max-height: 100px;
+}
+
+.right-column,
+.left-column{
+    box-sizing: border-box;
+}
+
+.left-column{
+    order: 1;
+}
+
+.right-column{
+
 }
 
 .image-with-description {
@@ -123,9 +146,9 @@
 }
 
 .rating {
-    flex: 1;
-    max-width: 30%;
-    margin-left: 20px;
+    display:flex;
+    flex-direction: column;
+    margin-left: 0;
 }
 
 .rating h3 {
@@ -140,15 +163,16 @@
 }
 
 .description {
-    flex: 1;
-    max-width: 30%;
-    margin-left: 20px;
+    margin-top:auto ;
+    margin-bottom: 60px;
 }
 
 .description p {
-    font-family: "SansSerif";
-    font-size: 14px;
-    color: #000;
+    font-family: "Poppins";
+    font-size: 18px;
+    color: #ffffff;
+    width: 50%;
+    margin-left:40px;
 }
 
 .months-container {
@@ -164,7 +188,7 @@
 }
 
 .tour-month {
-    font-family: "SansSerif", sans-serif;
+    font-family: "SansSerif";
     font-size: 1em;
     color: #000;
     background-color: #ddd;
@@ -174,11 +198,14 @@
 }
 
 .weather-widget-container {
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-left: 80%;
+    width: 90%;
+    height: 300px;
 }
 
 #ww_da6967281f185 {
-    max-width: 100%;
+    max-width: 100px;
 }
 
 #scroll-indicator {
@@ -268,16 +295,17 @@ body {
 }
 
 .hikeName {
-    font-family: "SansSerif";
+    font-family: "Poppins";
     font-size: 40px;
-    margin-top: 20px; /* Füge margin-top hinzu, um den Abstand nach oben zu vergrößern */
-    margin-bottom: 100px;
+    margin-top: 10px; /* Füge margin-top hinzu, um den Abstand nach oben zu vergrößern */
     color: white;
 }
 
 #hikeName{
+    margin-top: px;
     font-size: 2em;
     color: #ffffff;
+    margin-bottom: 10px;
 }
 
 #moreInfoText{
@@ -300,25 +328,34 @@ body {
     gap: 20px;
 }
 
-#slideshow {
-    width: 800px; /* Ändere die Breite auf 100%, um sie innerhalb des Containers zu füllen */
-    height: 500px;
+.slideshow{
+    width: 100%; /* Ändere die Breite auf 100%, um sie innerhalb des Containers zu füllen */
+    max-width: 600px; /* Ändere die Breite nach Bedarf */
+    overflow: hidden;
+    position: absolute;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.57);
-    align-self: center;
+    box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.49);
+    margin-top: 30px;
+    margin-right: 500px;
+}
+
+#slideshow {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.49);
     margin-bottom: 20px;
 }
 
+
 #slideshow-container {
     width: 100%;
-    max-width: 800px; /* Ändere die Breite nach Bedarf */
-    margin: 0 auto;
+    max-width: 600px; /* Ändere die Breite nach Bedarf */
+    margin: 0 0 0 0 ;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgb(5, 44, 61);
-    align-self: center;
-    margin-top: 20px;
 }
 
 
@@ -345,7 +382,7 @@ body {
     display: flex;
     flex-direction: column; /* Ändere die Ausrichtung zu vertikal */
     align-items: center;
-    margin-top: 60px;
+    margin-top: 50px;
     padding:20px;
     border-radius: 10px;
 }
@@ -379,6 +416,7 @@ body {
     font-size: 72px;
     text-align: center; /* Zentriere den Text */
     color: rgb(0, 0, 0);
+    margin-left: 10px;
 }
 
 #tour-months {
@@ -400,7 +438,7 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    left: 50%;
+
     transform: translateX(-50%);
     padding: 20px;
     background-color: rgba(2, 0, 0, 0.49);
@@ -410,6 +448,7 @@ body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
     color: black;
+    width: 50%;
 }
 
 .show{
@@ -421,20 +460,25 @@ body {
 
 .monthLabel, .tour-month, .weather-widget {
     font-family: 'PT Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .weather-widget {
     height: 200px;
     max-width: 480px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 90px;
     margin-top: 20px;
 }
 
-.weather-map-container {
+
+
+.weather-map-months{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .info {
@@ -518,14 +562,16 @@ body {
 
 
 .container {
+    margin-top: 100px;
+    margin-bottom: 110px;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
-    min-height: 100vh;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.49);
 }
 
 .image-with-description {
@@ -534,10 +580,6 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .image-title {
@@ -557,31 +599,17 @@ body {
     border-radius: 10px;
 }
 
-.description {
-    flex: 1;
-    max-width: 50%;
-    margin-left: 20px;
-}
 
-.description p {
-    font-family: "SansSerif";
-    font-size: 14px;
-    color: #000;
-}
 
 .weather-and-months {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 20px;
 }
 
-.weather-widget-container {
-    flex: 1;
-    max-width: 40%;
-    margin-right: 20px;
-}
+
 
 
 
@@ -600,19 +628,20 @@ body {
 }
 
 
-.rating h3 {
-    font-size: 14px;
-    color: black;
+.rating h4 {
+    font-size: 20px;
+    color: #ffffff;
 }
 
 .rating p{
-    font-size: 16px;
-    color: black;
+    max-width: 50%;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 .rating h2{
     font-size: 14px;
-    color: black;
+    color: #ffffff;
 }
 
 
@@ -622,7 +651,7 @@ body {
 
 .stars:before {
     content: '\2605'; /* Stern-Symbol */
-    font-size: 14px;
+    font-size: 20px;
     color: #FFD700; /* Farbe der Sterne */
     margin-right: 5px;
 }

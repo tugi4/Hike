@@ -77,7 +77,6 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    overflow: auto; /* Verhindern Sie das Scrollen, um nur das Dreieck sichtbar zu machen */
 }
 
 .triangle-container {
@@ -147,6 +146,7 @@ body::before {
     background-repeat: no-repeat;
     background-position: left top;  /* Änderung: Position ganz links oben */
     filter: brightness(50%);
+
 }
 
 
@@ -281,7 +281,7 @@ body::before {
 }
 
 #hike {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 20px;
     width: 100%;
@@ -299,6 +299,7 @@ body::before {
     position: relative;
     margin-top: 100px; /* Anpassung der Position nach oben */
     text-align: center;
+    cursor:pointer;
 }
 
 .center-icons a {
