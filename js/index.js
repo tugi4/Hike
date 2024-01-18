@@ -23,3 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Füge die ersten drei Bilder zur Seite hinzu
 });
+
+// Hier legst du die ausgewählten Monate fest
+const selectedMonths = ["Jan", "Feb", "Mar"];
+
+// Durchlaufe alle Monate und füge die CSS-Klasse hinzu, wenn der Monat ausgewählt ist
+const tourMonths = document.querySelectorAll('.tour-month');
+tourMonths.forEach(month => {
+    if (selectedMonths.includes(month.textContent)) {
+        month.classList.add('tour-month-selected');
+    }
+});

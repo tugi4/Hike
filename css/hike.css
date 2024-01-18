@@ -3,11 +3,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@400;700&display=swap');
 
+#video{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.49);
+    margin-bottom: 20px;
+    margin-top: 48px;
+    margin-left: -400px;
+;
+}
 
-.video {
-    width: 1100px; /* Breite auf 100% setzen, um sie im Container zu füllen */
-    height: 600px; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
-    align-items: center;
+.video{
+    width: 100%; /* Ändere die Breite auf 100%, um sie innerhalb des Containers zu füllen */
+    max-width: 600px; /* Ändere die Breite nach Bedarf */
+    border-radius: 5px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.49);
+    margin-top: 30px;
+    margin-right: 500px;
+}
+
+
+
+.tour-month-selected {
+    font-family: "SansSerif", serif;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    background-color: #082b46; /* Hintergrundfarbe für ausgewählte Monate */
+    color: black; /* Textfarbe für ausgewählte Monate */
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 700px;
+}
+
+.video-container {
+    width: 60%; /* 50% Breite für das Video */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.30);
 }
 
 .marked-month{
@@ -95,12 +140,11 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-radius: 10px;
-    max-height: 100px;
+    flex: 1; /* Flexibles Wachstum des Containers */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.49);
 }
 
 .right-column,
@@ -302,7 +346,6 @@ body {
 }
 
 #hikeName{
-    margin-top: px;
     font-size: 2em;
     color: #ffffff;
     margin-bottom: 10px;
@@ -333,8 +376,8 @@ body {
     max-width: 600px; /* Ändere die Breite nach Bedarf */
     overflow: hidden;
     position: absolute;
-    border-radius: 10px;
-    box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.49);
+    border-radius: 5px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.49);
     margin-top: 30px;
     margin-right: 500px;
 }
@@ -397,10 +440,11 @@ body {
 }
 
 #ww_da6967281f185{
-    height: 200px;
-    max-width: 480px;
+    height: 300px;
+    max-width: 600px;
     padding: 20px;
     border-radius: 10px;
+
 }
 #map {
     border-radius: 10px;
@@ -423,7 +467,8 @@ body {
     grid-area: 5/2/5/2; /* Grid-Area anpassen */
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 Spalten für jeden Monat */
-    grid-gap: 5px; /* Abstand zwischen den Monaten */
+    grid-gap: 5px;
+
 }
 
 
@@ -465,7 +510,7 @@ body {
 
 .weather-widget {
     height: 200px;
-    max-width: 480px;
+    max-width: 550px;
     padding: 20px;
     border-radius: 90px;
     margin-top: 20px;
@@ -559,11 +604,21 @@ body {
         transform: translateY(-10px);
     }
 }
+.container-oben {
+    flex: 2;
+    padding: 10px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 230px;
+}
 
 
 .container {
-    margin-top: 100px;
-    margin-bottom: 110px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     max-width: 1200px;
     padding: 20px;
     min-height: 700px;
@@ -571,7 +626,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.49);
 }
 
 .image-with-description {
