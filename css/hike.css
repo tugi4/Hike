@@ -3,37 +3,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@400;700&display=swap');
 
-#video{
-    width: 100%;
-    max-width: 800px;
+
+.rechter-container{
+    float: right;
+    margin-left: 700px;
+    margin-bottom:1000px;
+}
+
+.ratings{
+    text-align: left;
+    color:white;
+    font-family: "Arial Black";
+    margin-left: 750px;
+    margin-top: -300px;
+}
+
+.stars{
+    display: inline-block;
+}
+
+.fa-star{
+    color:gold;
+}
+.video-container {
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.30);
+    margin-left: 20px;
+    margin-top:30px;
     border-radius: 10px;
-    position: absolute;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.49);
-    margin-bottom: 20px;
-    margin-top: 48px;
-    margin-left: -400px;
-;
+    position: relative; /* Füge relative Positionierung hinzu */
 }
 
-.video{
-    width: 100%; /* Ändere die Breite auf 100%, um sie innerhalb des Containers zu füllen */
-    max-width: 600px; /* Ändere die Breite nach Bedarf */
-    border-radius: 5px;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.49);
-    margin-top: 30px;
-    margin-right: 500px;
+.video {
+    width: 600px; /* Setze die Breite des Videos auf 100% */
+    height: 400px; /* Lass die Höhe automatisch anpassen, um das Seitenverhältnis zu bewahren */
+    object-fit: cover; /* Decke den gesamten Container ab, das Seitenverhältnis bleibt erhalten */
+    left: 0; /* Setze die linke Position auf 0, um es am linken Rand zu platzieren */
+    top: 0; /* Setze die obere Position auf 0 */
 }
-
-
 
 .tour-month-selected {
-    font-family: "SansSerif", serif;
+    font-family: "Arial Black";
     font-size: 1em;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-
-    background-color: #082b46; /* Hintergrundfarbe für ausgewählte Monate */
     color: black; /* Textfarbe für ausgewählte Monate */
 }
 
@@ -42,23 +58,17 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    min-height: 700px;
-}
-
-.video-container {
-    width: 60%; /* 50% Breite für das Video */
-    overflow: hidden;
-    border-radius: 10px;
+    height: 600px;
     box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.30);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.56);
+    margin-top:50px;
 }
 
-.marked-month{
-    background-color: #082b46;
-    color: white;
-}
+
 .icon-text{
     display: flex;
     align-items: center;
@@ -76,7 +86,7 @@
     margin:0 10px;
     margin-top: 10px;
     font-size: 14px;
-    font-family: "SansSerif";
+    font-family: "Arial Black";
     color:white;
 }
 #navBar {
@@ -84,7 +94,6 @@
     top: 0;
     width: 100%;
     height: 110px;
-    background-color: #082b46;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -98,7 +107,7 @@
     align-items: center;
 }
 #navBar a {
-    font-family: "SansSerif";
+    font-family: "Arial Black";
     font-size: 14px;
     margin: 0 5px; /* Füge den gewünschten Abstand zwischen den Icons hinzu */
     color: white;
@@ -130,10 +139,7 @@
     background-color: #555; /* Hintergrundfarbe des ausgewählten Bereichs in der Navbar */
 }
 
-#navBar #moreInfoText {
-    margin-top:20px;
-    text-decoration: underline; /* Optional: Unterstreichung des Textes */
-}
+
 
 #navBar svg:hover {
     transform: scale(1.2);
@@ -178,7 +184,7 @@
 }
 
 .image-title h3 {
-    font-family: "SansSerif";
+    font-family: "Arial Black";
     font-size: 1.5em;
     color: #000;
 }
@@ -196,7 +202,7 @@
 }
 
 .rating h3 {
-    font-family: "SansSerif";
+    font-family: "Arial Black";
     font-size: 1em;
     color: #000;
 }
@@ -212,11 +218,13 @@
 }
 
 .description p {
-    font-family: "Poppins";
+    font-family: "Arial Black";
+    margin-top: 250px;
+    margin-bottom:50px;
     font-size: 18px;
     color: #ffffff;
     width: 50%;
-    margin-left:40px;
+    margin-left:80px;
 }
 
 .months-container {
@@ -227,12 +235,12 @@
     align-items: center;
     flex: 2;
     max-width: 30%;
-    top:100%;
-    left: 1000%;
+    margin-top:70px;
+    margin-left: 40px;
 }
 
 .tour-month {
-    font-family: "SansSerif";
+    font-family: "Arial Black";
     font-size: 1em;
     color: #000;
     background-color: #ddd;
@@ -242,10 +250,10 @@
 }
 
 .weather-widget-container {
-    margin-top: 40px;
-    margin-left: 80%;
-    width: 90%;
-    height: 300px;
+    margin-top: 20px;
+    margin-left: 90px;
+    width: 300px;
+    height: 150px;
 }
 
 #ww_da6967281f185 {
@@ -253,6 +261,8 @@
 }
 
 #scroll-indicator {
+    margin-left: 850px;
+    margin-bottom: 300px;
     cursor: pointer;
     font-size: 10px;
     margin-top: 20px;
@@ -307,17 +317,25 @@
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-body {
-    background: linear-gradient(to bottom, #094c67, #0a5e5e);
-    margin: 0;
-    padding:0;
-    font-family: 'Arial', sans-serif;
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: "Arial Black";
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: -1;
+    background: url("../image/picture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top 20%; /* Adjust the percentage value as needed */
 }
-
 
 #navBar > div {
     display: flex;
@@ -339,7 +357,7 @@ body {
 }
 
 .hikeName {
-    font-family: "Poppins";
+    font-family: "Arial Black";
     font-size: 40px;
     margin-top: 10px; /* Füge margin-top hinzu, um den Abstand nach oben zu vergrößern */
     color: white;
@@ -354,6 +372,8 @@ body {
 #moreInfoText{
     text-decoration: underline;
     color: #ffffff;
+    margin-left: 700px;
+    font-family: "Arial Black";
 }
 
 .hikeDetails {
@@ -373,13 +393,12 @@ body {
 
 .slideshow{
     width: 100%; /* Ändere die Breite auf 100%, um sie innerhalb des Containers zu füllen */
-    max-width: 600px; /* Ändere die Breite nach Bedarf */
+    max-width: 1000px; /* Ändere die Breite nach Bedarf */
     overflow: hidden;
     position: absolute;
     border-radius: 5px;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.49);
-    margin-top: 30px;
-    margin-right: 500px;
+    margin-top: 20px;
 }
 
 #slideshow {
@@ -403,14 +422,7 @@ body {
 
 
 
-#scroll-indicator {
-    cursor: pointer;
-    font-size: 10px;
-    margin-bottom: 40px;
-    align-self: center; /* Zentriere den Pfeil horizontal */
-    animation: bounce 1.5s infinite;
-    filter: invert(1);
-}
+
 
 #scroll-indicator img{
     width: 50px;
@@ -431,13 +443,6 @@ body {
 }
 
 
-.location {
-    font-size: 30px;
-    margin-top: 10px; /* Füge margin-top hinzu, um den Abstand nach oben zu vergrößern */
-    color: #000000;
-    font-family: "Pt Sans";
-    font-weight: bold;
-}
 
 #ww_da6967281f185{
     height: 300px;
@@ -456,7 +461,7 @@ body {
 
 #description {
     padding: 20px;
-    font-family: "Agency FB";
+    font-family: "Arial Black";
     font-size: 72px;
     text-align: center; /* Zentriere den Text */
     color: rgb(0, 0, 0);
@@ -474,7 +479,7 @@ body {
 
 
 .tour-month-selected {
-    background-color: #4F6F52;
+    background-color: #2a2e1f;
     color: #ffffff;
 }
 
@@ -490,7 +495,7 @@ body {
     z-index: 1;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial Black";
     font-size: 16px;
     color: black;
     width: 50%;
@@ -504,7 +509,7 @@ body {
 }
 
 .monthLabel, .tour-month, .weather-widget {
-    font-family: 'PT Sans', sans-serif;
+    font-family: "Arial Black";
     font-size: 18px;
 }
 
@@ -570,7 +575,7 @@ body {
 }
 
 .info > div {
-    font-family: "Pt Sans";
+    font-family: "Arial Black";
     font-weight: bold;
     font-size: 30px;
 }
@@ -579,7 +584,7 @@ body {
 }
 
 .info2 > div {
-    font-family: "Pt Sans";
+    font-family: "Arial Black";
     font-weight: bold;
     font-size: 18px;
     margin-left: 20px;
@@ -612,7 +617,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-left: 230px;
+    margin-left: -80px;
 }
 
 
@@ -642,7 +647,7 @@ body {
 }
 
 .image-title h3 {
-    font-family: "SansSerif";
+    font-family: "Arial Black";
     font-size: 1.5em;
     color: #000;
 }
@@ -664,11 +669,8 @@ body {
 }
 
 
-
-
-
 .tour-month {
-    font-family: "SansSerif";
+    font-family: "Arial Black";
     font-size: 1em;
     color: #000;
     background-color: #ddd;

@@ -4,6 +4,12 @@
 <head>
     <title>Create Your Own Hike</title>
     <link rel="stylesheet" href="../css/create.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Beispiel für eine externe Bibliothek -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
     <style>
         .info-box textarea{
             height: 40px;
@@ -13,35 +19,31 @@
 </head>
 
 <body>
-
 <div id="navBar" class="navBar">
-    <div class="icon-text">
+    <div class="icon-text" onmouseover="iconHover(this)" onmouseout="iconUnhover(this)">
         <a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-signpost-split" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-signpost-split" viewBox="0 0 16 16">
                 <path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7zm1 3V8H2l-.75 1L2 10zm0-5h6l.75-1L14 3H8z"/>
             </svg>
             <p>Home</p>
         </a>
+
     </div>
     <div class="icon-text">
-        <a href="profil.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
-                <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+        <a href="profil.html" onmouseover="iconHover(this)" onmouseout="iconUnhover(this)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
             </svg>
-            <p>Login</p>
-        </a>
-        <a href="drive_to.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-            </svg>
-            <p>Map</p>
+            <p>Profil</p>
         </a>
     </div>
 </div>
+
+
+<div class="attention-text" style="width: 700px; height:30px; border-radius:10px; margin-top:80px;">
+    <h2 style="font-size: 36px; margin-bottom: 40px;">Create Your Own Hike!</h2>
+</div>
 <div class="container">
-    <h1 class="text-center">Create Your Own Hike</h1>
     <div class="info-box">
         <div class="option">
             <label for="months">Month:</label>
@@ -58,15 +60,6 @@
                 <option value="october">October</option>
                 <option value="november">November</option>
                 <option value="december">December</option>
-            </select>
-        </div>
-
-        <div class="option">
-            <label for="difficulty">Difficulty:</label>
-            <select id="difficulty">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
             </select>
         </div>
 
@@ -91,8 +84,17 @@
         </div>
 
         <div class="option">
-            <label for="landscape">Landscape:</label>
-            <input type="text" id="landscape">
+            <label for="difficulty">Difficulty:</label>
+            <div class="rating" id="difficulty" style="margin-top:10px;"></div>
+        </div>
+
+        <div class="option">
+            <label for="scenary">Scenary:</label>
+            <div class="rating" id="scenary" style="margin-top:10px;"></div>
+        </div>
+        <div class="option">
+            <label for="levelOfFitness">Level of Fitness:</label>
+            <div class="rating" id="levelOfFitness" style="margin-top:10px;"></div>
         </div>
 
         <button onclick="submitForm()">Create Hike</button>
@@ -100,13 +102,41 @@
 </div>
 
 <script>
+    src="script.js"
     function submitForm() {
         // Hier kannst du die Formulardaten verarbeiten
         alert('Formulardaten absenden...');
     }
+
+    $(document).ready(function () {
+        // Initialisiere die Sternenbewertung für Difficulty
+        $("#difficulty").rateYo({
+            rating: 1, // Setze die Standardbewertung hier
+            readOnly: false, // Mache die Bewertung schreibgeschützt oder entferne es für eine interaktive Bewertung
+            starWidth: "20px"
+        });
+
+        // Initialisiere die Sternenbewertung für Scenary
+        $("#scenary").rateYo({
+        rating: 1, // Setze die Standardbewertung hier
+        readOnly: false , // Mache die Bewertung schreibgeschützt oder entferne es für eine interaktive Bewertung
+        starWidth: "20px"    });
+
+        $("#levelOfFitness").rateYo({
+            rating: 1, // Setze die Standardbewertung hier
+            readOnly: false , // Mache die Bewertung schreibgeschützt oder entferne es für eine interaktive Bewertung
+            starWidth: "20px"    });
+    });
+
+    function iconHover(icon) {
+        icon.querySelector('.icon').style.transform = "scale(1.2)";
+    }
+
+    function iconUnhover(icon) {
+        icon.querySelector('.icon').style.transform = "scale(1)";
+    }
 </script>
 
-<script src="script.js"></script>
 </body>
 
 </html>

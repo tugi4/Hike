@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&family=PT+Sans:wght@400;700&display=swap');
+
+
+
+.icons{
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.personal-info{
+    color: white;
+    font-size: 18px;
+    margin-left:25px;
+}
+
+.hikeText{
+    color: white;
+    font-size: 18px;
+    margin-left: 160px;
+}
+
+.container-hikes{
+    flex-wrap:wrap;
+    background-color: rgba(0, 0, 0, 0.71);
+    width: 900px;
+    height: 700px;
+    border-radius: 3%;
+    margin-left: 500px;
+    margin-top: -390px;
+    margin-bottom:50px;
+}
+.hike-image{
+    box-sizing: border-box;
+    height: 200px;
+    width: 250px;
+    border-radius:10px;
+    margin-right: 20px;
+    margin-top:40px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.additional-image{
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
+}
+
+.additional-image.enlarged{
+    width: 400px;
+    height: 400px;
+    transition:all 0.3s ease-in-out;
+    transform: scale(1.2);
+
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 200px;
+    margin-bottom: 10px;
+    margin-right: 1200px;
+    margin-top:50px;
+    margin-left: 125px;
+}
+
+.profile-username {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    align-items: center;
+    margin-left: 40px;
+    margin-top:10px;
+    margin-bottom:70px;
+    margin-left: 170px;
+}
+
+.profile-container{
+    width: 400px;
+    height: 700px;
+    border-radius:5%;
+    background-color: rgba(0, 0, 0, 0.71);
+    margin-left: -1000px;
+    margin-top:50px;
+}
+
+.profile-stat {
+    color: white;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.43);
+    border-radius: 5px;
+    margin-left:80px;
+    margin-top: 90px;
+    height: 90%;
+    width: 200px;
+}
+
+.video {
+    width: 1100px; /* Breite auf 100% setzen, um sie im Container zu füllen */
+    height: 600px; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    align-items: center;
+}
+
+.marked-month{
+    background-color: #082b46;
+    color: white;
+}
+.icon-text{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-left:10px;
+}
+
+.icons-right{
+    display: flex;
+    gap: 20px;
+}
+
+.icon-text p{
+    margin:0 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "Arial Black";
+    color:white;
+}
+#navBar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left:10px;
+}
+
+#navBar div{
+    gap: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#navBar a {
+    font-family: "Arial Black";
+    font-size: 14px;
+    margin: 0 5px; /* Füge den gewünschten Abstand zwischen den Icons hinzu */
+    color: white;
+    text-decoration: none;
+}
+
+#navBar a:hover {
+    text-decoration: underline; /* Optional: Unterstreichung bei Hover */
+    color:white;
+}
+
+#navBar div.home-icon {
+    margin-right: auto; /* Damit der Home-Link auf der linken Seite bleibt */
+}
+
+#navBar svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+#navBar div{
+    display:flex;
+}
+
+#navBar div a {
+    margin-right: 20px; /* Optional: Füge Abstand zwischen den Links hinzu */
+}
+
+#navBar #selected {
+    background-color: #555; /* Hintergrundfarbe des ausgewählten Bereichs in der Navbar */
+}
+
+#navBar #moreInfoText {
+    margin-top:20px;
+    text-decoration: underline; /* Optional: Unterstreichung des Textes */
+}
+
+#navBar svg:hover {
+    transform: scale(1.2);
+}
+
+
+
+#scroll-indicator {
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 20px;
+    align-self: center;
+    animation: bounce 1.5s infinite;
+    filter: invert(1);
+}
+
+/* Weitere CSS-Regeln und Anpassungen können hinzugefügt werden, wenn nötig */
+
+
+.center-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex:1;
+    position: relative;
+    margin-top: 50px;
+}
+
+
+
+.icon-link {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.icon-hover{
+    transform: scale(1.2);
+}
+
+
+/* Stile für die Popups */
+.popup {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    z-index: 1;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body {
+    background: url("../image/picture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    font-family: "Arial Black";
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-position: left top 20%; /* Adjust the percentage value as needed */
+}
+
+.list {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+
+#navBar > div {
+    display: flex;
+    gap: 5px;
+    height: 2.5rem;
+}
+
+#navBar > div > a {
+    font-size: 1rem;
+    color: #000000;
+    text-decoration-line:none;
+    align-self: flex-end;
+}
+
+#navBar > div > img {
+    margin-left: 70%;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.hikeName {
+    font-family: "Arial Black";
+    font-size: 40px;
+    margin-top: 10px; /* Füge margin-top hinzu, um den Abstand nach oben zu vergrößern */
+    color: white;
+}
+
+#hikeName{
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#moreInfoText{
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.hikeDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hikeImg {
+    margin-left: 20px;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+
+
+.container {
+    min-width: 1500px;
+    min-height: 700px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.21);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 110px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border: 5px solid #fff;
+}
+
+.username {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat p:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.stat p:last-child {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.posts {
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
