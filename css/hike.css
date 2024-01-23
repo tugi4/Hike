@@ -196,9 +196,10 @@
 }
 
 .rating {
+    margin-top: 30px;
     display:flex;
     flex-direction: column;
-    margin-left: 0;
+    margin-left: 300px;
 }
 
 .rating h3 {
@@ -685,6 +686,13 @@ body::before {
 .rating h4 {
     font-size: 20px;
     color: #ffffff;
+
+}
+
+.rating h5 {
+    font-size: 20px;
+    color: #ffffff;
+
 }
 
 .rating p{
