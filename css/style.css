@@ -1,59 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Caveat&family=Libre+Baskerville:ital@1&display=swap');
 
 
-
-.rating h3 {
-    font-size: 16px;
-    color: white;
-    margin-top: 5px;
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: url("../image/picture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top 20%;
 }
-
-.rating p{
-    font-size: 14px;
-    color: white;
-    margin-top:10px;
-}
-
-.rating h2{
-    font-size: 14px;
-    color: white;
-}
-.rating {
-
-}
-
-.stars {
-    display: inline-block;
-}
-
-.stars:before {
-    content: '\2605'; /* Stern-Symbol */
-    font-size: 14px;
-    color: #FFD700; /* Farbe der Sterne */
-    margin-right: 5px;
-}
-
-.stars[data-rating="1"]:before {
-    content: '\2605\2606\2606\2606\2606'; /* Ein Stern */
-}
-
-.stars[data-rating="2"]:before {
-    content: '\2605\2605\2606\2606\2606'; /* Zwei Sterne */
-}
-
-.stars[data-rating="3"]:before {
-    content: '\2605\2605\2605\2606\2606'; /* Drei Sterne */
-}
-
-.stars[data-rating="4"]:before {
-    content: '\2605\2605\2605\2605\2606'; /* Vier Sterne */
-}
-
-.stars[data-rating="5"]:before {
-    content: '\2605\2605\2605\2605\2605'; /* Fünf Sterne */
-}
-
-
 
 .attention-text {
     text-align: center;
@@ -78,85 +38,8 @@
     font-family: "Arial";
 }
 
-
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-.triangle-container {
-    position: relative;
-    overflow: hidden;
-    height: 500px;
-}
-
-.triangle {
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-
-.background-image {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-
-.swiper-container {
-    margin-top: 20px;
-}
-
-.swiper-slide {
-    position: relative;
-    overflow: hidden;
-}
-
-.swiper-slide a {
-    display: block;
-}
-
-.swiper-slide img {
-    width: 50%;
-    height: auto;
-}
-
-
-
-.form-group {
-    margin-top: 20px;
-    text-align: center;
-}
-
 #searchBar {
     visibility: hidden;
-}
-
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    background: url("../image/picture.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left top 20%; /* Adjust the percentage value as needed */
-}
-
-
-
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
 }
 
 #navBar {
@@ -168,25 +51,12 @@ body::before {
     z-index: 1;
 }
 
-.swiper-wrapper {
-    display: flex;
-    flex-direction: row; /* Ändere flex-direction auf row */
-    justify-content: flex-start; /* Ändere justify-content auf flex-start */
-    align-items: flex-start;
-    width:100%;
-}
-
-
 .box {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 100px;
 
-}
-
-.swiper-slide:nth-child(even) {
-    order: -1;
 }
 
 #navBar > div {
@@ -214,93 +84,13 @@ body::before {
     margin-left: 250px;
 }
 
-.box > h1 {
-    margin-top: 100px;
-    font-family: 'SansSerif';
-    font-size: 40px;
-    color: white;
-}
-
-.hikes {
-    position: relative;
-    align-items: center;
-    margin-top: 50px; /* Reduziere den oberen Abstand */
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    max-width: 400px; /* Reduziere die maximale Breite */
-    max-height: 400px; /* Reduziere die maximale Höhe */
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px; /* Reduziere den unteren Abstand */
-}
-
-.indexhike:nth-child(even){
-    flex-direction: row-reverse;
-}
-
-.indexhike {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 40px; /* Reduziere den Abstand zwischen den Boxen */
-    margin-top: 20px; /* Reduziere den oberen Abstand */
-    margin-left: 20px; /* Reduziere den linken Abstand */
-    height: 200px; /* Reduziere die Höhe der Boxen */
-    width: 80%;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
-    position: relative;
-}
-
-.indexhike > a {
-    position: relative;
-    width: 100%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.indexhike > a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
-
-
-.indexhike > a > img {
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-}
-
-.indexhike > a > div {
-    font-family: "Bell MT";
-    font-size: medium;
-    color: white;
-    margin-left: 20px;
-    margin-top: 5px;
-}
-
-#hike {
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-
-#hikename {
-    list-style: none;
-}
-
 .center-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
     position: relative;
-    margin-top: 100px; /* Anpassung der Position nach oben */
+    margin-top: 100px;
     text-align: center;
     cursor:pointer;
 }
@@ -323,25 +113,18 @@ body::before {
 }
 
 .center-icons a p {
-    margin-top: 5px; /* Anpassen Sie den Abstand nach Bedarf */
+    margin-top: 5px;
     font-family: "Arial Black";
     font-size: 15px;
 
 }
 
 .center-icons a:hover .icon {
-    transform: scale(1.1); /* Ändern Sie die Skalierung nach Bedarf */
-}
-
-.icon-link {
-    margin: 0 20px;
-    text-decoration: none;
-    color: #333;
-    text-align: center;
+    transform: scale(1.1);
 }
 
 .icon {
-    width: 100px; /* Anpassung der Icon-Größe */
+    width: 100px;
     height: 100px;
     transition: transform 0.3s ease-in-out;
 }
@@ -350,42 +133,11 @@ body::before {
     transform: scale(1.2);
 }
 
-
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow-x: hidden;
-}
-
-.parallax-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.parallax-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%; /* Adjust based on your needs */
-    background: url('https://static.vecteezy.com/ti/gratis-vektor/t2/649398-wandern-symbol-symbol-zeichen-kostenlos-vektor.jpg') center/cover no-repeat;
-    transform: translate3d(0, 0, 0);
-}
-
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-}
-
-h1, p {
-    margin: 0;
 }
 
 #searchPopup{
@@ -396,14 +148,13 @@ h1, p {
     margin-left:250px;
 }
 
-
 .image-with-description {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 50px; /* Füge den Abstand zwischen den Boxen hinzu */
+    margin-bottom: 50px;
     margin-top: 50px;
     width: 90%;
     height: 100%;
@@ -422,60 +173,110 @@ h1, p {
     text-align: center;
     text-decoration: underline;
     z-index: 1;
-    margin-bottom: 20px; /* Ändere den Abstand nach Bedarf */
+    margin-bottom: 20px;
 }
 
 .image-with-description .description {
     position: relative;
-    margin-top: 15px; /* Ändere den Abstand nach Bedarf */
+    margin-top: 15px;
 }
 
 
 .image-with-description img:active {
-    border: 3px solid #ffffff; /* Füge hier den gewünschten Hervorhebungsstil hinzu */
-    box-shadow: 0 0 10px rgb(255, 255, 255); /* Füge hier den gewünschten Schatten hinzu */
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
     outline:none;
 }
 
 .image-with-description img:hover {
-    border: 3px solid #ffffff; /* Blauer Rahmen beim Hovern */
-    transition: border 3s ease-out; /* Übergang mit 3 Sekunden Dauer und ease-out Timing-Funktion */
-    box-shadow: 0 0 10px rgb(255, 255, 255); /* Füge hier den gewünschten Schatten hinzu */
+    border: 3px solid #ffffff;
+    transition: border 3s ease-out;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 
 .image-title {
     text-align: center;
-    flex-basis: 20%; /* Passt die Breite des Titel- und Bildbereichs an */
+    flex-basis: 20%;
 }
 
 .image-title h3 {
-    color: #ffffff; /* Weißer Text für den Titel */
-    margin-bottom: 10px; /* Abstand zwischen Titel und Bild */
+    color: #ffffff;
+    margin-bottom: 10px;
     font-size: 28px;
     font-family: "Century Gothic";
 }
 
 .image-title img {
-    width: 100%; /* Bild nimmt die gesamte Breite seines Containers ein */
-    max-width: 300px; /* Maximale Breite des Bildes festlegen */
-    height: 200px; /* Höhe automatisch anpassen */
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
     border-radius:10px;
 }
 
 .description {
-    flex-basis: 50%; /* Passt die Breite des Beschreibungsbereichs an */
+    flex-basis: 50%;
     padding: 0px;
-    color: #ffffff; /* Weißer Text für die Beschreibung */
-    border-radius: 10px; /* Abgerundete Ecken für die Beschreibung */
-    margin-left: 10px; /* Abstand zwischen Bild und Beschreibung */
+    color: #ffffff;
+    border-radius: 10px;
+    margin-left: 10px;
     font-size: 16px;
     position: relative;
     font-family: "Century Gothic";
 }
 
+.rating h3 {
+    font-size: 16px;
+    color: white;
+    margin-top: 5px;
+}
 
-/* Responsive Anpassungen */
+.rating p{
+    font-size: 14px;
+    color: white;
+    margin-top:10px;
+}
+
+.rating h2{
+    font-size: 14px;
+    color: white;
+}
+.rating {
+
+}
+
+.stars {
+    display: inline-block;
+}
+
+.stars:before {
+    content: '\2605';
+    font-size: 14px;
+    color: #FFD700;
+    margin-right: 5px;
+}
+
+.stars[data-rating="1"]:before {
+    content: '\2605\2606\2606\2606\2606';
+}
+
+.stars[data-rating="2"]:before {
+    content: '\2605\2605\2606\2606\2606';
+}
+
+.stars[data-rating="3"]:before {
+    content: '\2605\2605\2605\2606\2606';
+}
+
+.stars[data-rating="4"]:before {
+    content: '\2605\2605\2605\2605\2606';
+}
+
+.stars[data-rating="5"]:before {
+    content: '\2605\2605\2605\2605\2605';
+}
+
+
 @media (max-width: 768px) {
     .image-with-description {
         flex-direction: column;

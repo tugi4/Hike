@@ -7,25 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/index.js"></script>
-    <style>
-        .image-with-description img:active {
-            border: 3px solid #84aada; /* Füge hier den gewünschten Hervorhebungsstil hinzu */
-            box-shadow: 0 0 10px rgb(0, 119, 255); /* Füge hier den gewünschten Schatten hinzu */
-        }
-    </style>
 </head>
-
 <body>
-
 <div class="attention-text">
     <h2>Discover the Beauty of Nature</h2>
     <p>Embark on an unforgettable hiking experience with IsoTrails. Explore scenic trails, majestic landscapes, and create lasting memories.</p>
 </div>
-
 <div class="center-icons">
     <a href="#" class="icon img-fluid" onclick="toggleHikeElements()">
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" class="bi bi-signpost-split" viewBox="0 0 16 16">
@@ -53,12 +40,12 @@
         <p>Profil</p>
     </a>
 </div>
-
+<!--Hike Liste-->
 <div id="hike" class="swiper-container" style="display: none;">
     <div class="image-with-description">
         <div class="image-title">
             <h3>Diedampfskopf</h3>
-            <img src="https://img3.oastatic.com/img2/45452164/max/variant.jpg" alt="Hochplateau Tschengla">
+            <img src="https://img3.oastatic.com/img2/45452164/max/variant.jpg" >
         </div>
         <div class="rating">
             <h3>Overall Difficulty:</h3>
@@ -68,7 +55,6 @@
             <h3>Distance:</h3>
             <p>30km</p>
         </div>
-
         <div class="description">
             <p>Following the trip up to the mountain station, it is worth taking a short detour to the top of the Diedamskopf to get a breath-taking panorama. Via Kreuzle you arrive at the peak of Falzer Kopf and continue to the Neuhornbachhaus. From there, you hike across the Falzalpe and Breitenalpe as far as the middle station, without having a great difference in altitude to overcome. You arrive back in the valley in comfort – by cable car.</p>
         </div>
@@ -76,7 +62,7 @@
     <div class="image-with-description">
         <div class="image-title">
             <h3>Pfänder</h3>
-            <img src="https://austria-forum.org/attach/Heimatlexikon/Pf%C3%A4nder/Pfander_Bregenz_Bodensee_1.jpg" alt="Hochplateau Tschengla">
+            <img src="https://austria-forum.org/attach/Heimatlexikon/Pf%C3%A4nder/Pfander_Bregenz_Bodensee_1.jpg" >
         </div>
         <div class="rating">
             <h3>Overall Difficulty:</h3>
@@ -86,14 +72,13 @@
             <h3>Distance:</h3>
             <p>23km</p>
         </div>
-
         <div class="description">
             <p>Directly at the mountain station, you will find the Rhein Valley terrace which gives you a direct view of the borders of the Old and New Rhein, the majestic mountain peaks of Switzerland, Liechtenstein, and Voralberg.</p>        </div>
     </div>
     <div class="image-with-description">
         <div class="image-title">
             <h3>Karren</h3>
-            <img src="https://www.bodensee.de/extension/portal-bodensee/var/storage/images/media/bibliothek/ortsbilder/dornbirn/karren-im-winter-dsg/50547-1-ger-DE/karren-im-winter-dsg_front_large.jpg" alt="Hochplateau Tschengla">
+            <img src="https://www.bodensee.de/extension/portal-bodensee/var/storage/images/media/bibliothek/ortsbilder/dornbirn/karren-im-winter-dsg/50547-1-ger-DE/karren-im-winter-dsg_front_large.jpg" >
         </div>
         <div class="rating">
             <h3>Overall Difficulty:</h3>
@@ -109,7 +94,7 @@
         </div>
     </div>
 </div>
-
+<!--Searchbar-->
 <div id="searchBar" class="form-group">
     <input type="text" class="form-control" id="searchPopup" placeholder="Enter your search" onclick="searchHikes()">
 </div>
@@ -119,59 +104,32 @@
         { name: "Diedampfskopf", link: "diedamskopf.html" },
         { name: "Pfänder", link: "pfaender.html" },
         { name: "Karren", link: "karren.html" }
-        // Füge bei Bedarf weitere Wanderungen hinzu
     ];
-
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
     function toggleSearchBar() {
         var body = document.body;
         var searchBar = document.getElementById("searchBar");
         var hikeElements = document.getElementById("hike");
 
-        // Verstecke die Hike-Elemente
         hikeElements.style.display = "none";
 
-        // Scrolle zum Seitenanfang
         body.scrollIntoView({ behavior: 'smooth' });
 
-        // Setze die Sichtbarkeit der Suchleiste
         var searchBarVisible = (searchBar.style.visibility === "hidden");
         searchBar.style.visibility = searchBarVisible ? "visible" : "hidden";
 
-        // Wenn die Suchleiste jetzt sichtbar ist, dann verstecke den Rest der Seite
         if (searchBarVisible) {
             hikeElements.style.display = "none";
         }
     }
 
-
-
     function toggleHikeElements() {
         var searchBar = document.getElementById("searchBar");
         var hikeElements = document.getElementById("hike");
 
-        // Verstecke die Suchleiste
         searchBar.style.visibility = "hidden";
 
-        // Toggle für die Hike-Elemente
         hikeElements.style.display = (hikeElements.style.display === "none") ? "block" : "none";
 
-        // Scrolle zur Hike-Sektion
         if (hikeElements.style.display === "block") {
             hikeElements.scrollIntoView({ behavior: 'smooth' });
             attachImageClickEvent();
@@ -183,12 +141,10 @@
 
         hikeImages.forEach(function (img, index) {
             img.addEventListener("click", function () {
-                // Leite auf die entsprechende Hike-Seite weiter
                 window.location.href = hikes[index].link;
             });
         });
     }
-
 
     function searchHikes() {
         var searchInput = document.getElementById("searchPopup").value.trim().toLowerCase();
@@ -196,18 +152,14 @@
         if (searchInput === "") {
             return;
         }
-
-        // Durchsuche die Liste der Wanderungen nach dem Suchbegriff
         var matchingHikes = hikes.filter(function (hike) {
             return hike.name.toLowerCase().includes(searchInput);
         });
 
-        // Wenn es Übereinstimmungen gibt und nur eine Übereinstimmung, leite weiter
         if (matchingHikes.length === 1) {
             window.location.href = matchingHikes[0].link;
         } else {
-            // Wenn keine oder mehrere Übereinstimmungen vorhanden sind, zeige Fehlermeldung oder tu etwas anderes.
-            console.log("Keine oder mehrere Übereinstimmungen gefunden.");
+            window.location.href = "error.html";
         }
     }
 
@@ -219,6 +171,5 @@
         icon.querySelector('.icon').style.transform = "scale(1)";
     }
 </script>
-
 </body>
 </html>

@@ -1,21 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Pfänder</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/hike.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/index.js"></script>
-
 </head>
-
 <body>
 <div id="navBar" class="navBar">
     <div class="icon-text">
@@ -42,7 +35,7 @@
         </a>
     </div>
 </div>
-
+<!--Box oberhalb der Seite-->
 <div class="content-container">
     <div class="video-container">
         <video id="video" autoplay>
@@ -74,21 +67,14 @@
                 </div>
             </div>
         </div>
-        <!-- Ihr vorhandener Inhalt für container-oben -->
 </div>
-
-
-
-
-
 
 <span id="moreInfoText">For more information press the arrow!</span>
 
 <div class="scroll-indicator" id="scroll-indicator" onclick="scrollToContent('data1-popup')">
     <img src="https://cdn-icons-png.flaticon.com/512/275/275178.png" alt="Scroll Indicator">
 </div>
-
-
+<!--Container unten-->
 <div class="container">
     <div class="slideshow" >
         <img id="slideshow" src="" alt="Slideshow Image">
@@ -109,10 +95,7 @@
         <p>Duration: 1,5h</p>
         <p>Distance: 23km</p>
     </div>
-
 </div>
-
-<script type="text/javascript" src="../js/hike.js"></script>
 
 <script>
     const images = [
@@ -155,54 +138,6 @@
         }
     }
 
-    function toggleData(popupId) {
-        const popup = document.getElementById(popupId);
-        const hikeDetails = document.querySelector(".hikeDetails");
-        const centerIcons = document.querySelector(".center-icons");
-
-        if (popup.style.display === "block") {
-            hikeDetails.style.display = "none";
-            centerIcons.style.display = "flex";
-        } else {
-            hikeDetails.style.display = "block";
-            centerIcons.style.display = "none";
-
-            const targetPosition = hikeDetails.offsetTop;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
-        }
-
-        popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
-    }
-
-    function hideAllPopups() {
-        const popups = document.querySelectorAll('.months-container, .weather-widget-container, .hike-details-container');
-        popups.forEach(popup => {
-            popup.style.display = 'none';
-        });
-    }
-
-    function toggleMonthsContainer() {
-        hideAllPopups();
-        const monthsContainer = document.getElementById('data1-popup');
-        monthsContainer.style.display = (monthsContainer.style.display === 'block') ? 'none' : 'block';
-    }
-
-    function toggleWeatherWidget() {
-        hideAllPopups();
-        const weatherWidgetContainer = document.getElementById('data2-popup');
-        weatherWidgetContainer.style.display = (weatherWidgetContainer.style.display === 'block') ? 'none' : 'block';
-        weatherWidgetContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    function toggleStreckenDetails() {
-        hideAllPopups();
-        toggleData('hike-details-popup');
-    }
-
     document.addEventListener('DOMContentLoaded', function () {
         const scrollIndicator = document.getElementById('scroll-indicator');
         const data1Popup = document.getElementById('data1-popup');
@@ -213,32 +148,6 @@
         });
     });
 
-
-    function positionPopupsContainer() {
-        const popupsContainer = document.getElementById('popups-container');
-        popupsContainer.style.top = '50%';
-        popupsContainer.style.left = '50%';
-        popupsContainer.style.transform = 'translate(-50%, -50%)';
-    }
-
-    function iconHover(icon) {
-        icon.style.transform = "scale(1.2)";
-    }
-
-    function iconUnhover(icon) {
-        icon.style.transform = "scale(1)";
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const plusIcon = document.querySelector('.bi-plus-square');
-
-        plusIcon.addEventListener('click', function () {
-            window.location.href = 'create.html';
-        });
-    });
 </script>
-
-
 </body>
-
 </html>

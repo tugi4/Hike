@@ -9,7 +9,12 @@
             text-align: center;
             font-family: 'Arial', sans-serif;
             overflow: hidden;
-            background: linear-gradient(to bottom, #094c67, #0a5e5e);
+            background: url("../image/picture.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            object-fit: cover;
             margin: 0; /* Zur Entfernung von Standardmargin des Body-Elements */
             height: 100vh; /* 100% der Viewport-Höhe */
             display: flex;
@@ -20,24 +25,24 @@
 
 
         h1 {
-            color: #000000;
+            color: #ffffff;
+            font-family: "Arial Black";
         }
 
         p {
-            color: #000000;
-        }
-
-        img {
-            max-width: 50%;
-            height: 50%;
-            margin-top: 20px;
-            object-fit: cover;
+            color: #ffffff;
+            font-family: "Arial Black";
         }
 
         a {
-            color: #4a8dc4;
+            color: #1d2113;
             text-decoration: underline;
             font-weight: bold;
+            font-family: "Arial Black";
+            background-color: rgba(204, 204, 204, 0.48);
+            border-radius: 10px;
+            height: 30px;
+            width: 300px;
         }
     </style>
 </head>
@@ -45,6 +50,5 @@
 <h1>Oops! Die Seite konnte nicht gefunden werden.</h1>
 <p>Es sieht so aus, als ob etwas schiefgelaufen ist. Die angeforderte Seite existiert nicht.</p>
 <a href="index.html">Zurück zur Startseite</a>
-<img src="https://i.pinimg.com/564x/8d/e5/9d/8de59db37c9eaa0cb7fca231440e1739.jpg" alt="Error Image">
 </body>
 </html>

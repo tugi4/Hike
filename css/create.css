@@ -10,18 +10,18 @@
     margin-bottom: 20px; /* Einen zusätzlichen Abstand für einen besseren visuellen Effekt hinzufügen */
 }
 
-.icon-text {
-    display: inline-block;
+.icon-text{
+    display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 30px;
-    margin-bottom: 900px;
+    margin-left:10px;
+    margin-bottom:200px;
 }
 
-.icon-text:hover {
-    transform: scale(1.2); /* Ändere die Skalierung auf 120% beim Überfahren mit der Maus */
+.icons-right{
+    display: flex;
+    gap: 20px;
 }
 
 .icon-text p{
@@ -31,19 +31,66 @@
     font-family: "Arial Black";
     color:white;
 }
+#navBar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left:10px;
+}
 
-#navBar .icon-text a:hover svg {
+#navBar div{
+    gap: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#navBar a {
+    font-family: "Arial Black";
+    font-size: 14px;
+    margin: 0 5px; /* Füge den gewünschten Abstand zwischen den Icons hinzu */
+    color: white;
+    text-decoration: none;
+}
+
+#navBar a:hover {
+    text-decoration: underline; /* Optional: Unterstreichung bei Hover */
+    color:white;
+}
+
+#navBar div.home-icon {
+    margin-right: auto; /* Damit der Home-Link auf der linken Seite bleibt */
+}
+
+#navBar svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+#navBar div{
+    display:flex;
+}
+
+#navBar div a {
+    margin-right: 20px; /* Optional: Füge Abstand zwischen den Links hinzu */
+}
+
+#navBar #selected {
+    background-color: #555; /* Hintergrundfarbe des ausgewählten Bereichs in der Navbar */
+}
+
+#navBar #moreInfoText {
+    margin-top:20px;
+    text-decoration: underline; /* Optional: Unterstreichung des Textes */
+}
+
+#navBar svg:hover {
     transform: scale(1.2);
 }
 
-
-
-#navBar {
-    position: relative;
-    display: flex;
-    padding: 10px;
-    pointer-events: none;
-}
 
 body {
     background: url("../image/picture.jpg");
